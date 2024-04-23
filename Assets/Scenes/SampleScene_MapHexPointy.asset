@@ -27,7 +27,7 @@ MonoBehaviour:
   - Type: Base Hex
     Id: 
     MapColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 0}
-    Prefab: {fileID: 0}
+    Prefab: {fileID: 919132149155446097, guid: 2de46c3bd225240b9a54abf2c0b7216c, type: 3}
     GridOffset: 0
     Tags: []
     Prefabs:

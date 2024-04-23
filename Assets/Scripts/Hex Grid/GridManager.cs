@@ -12,6 +12,7 @@ public class GridManager : MonoBehaviour
     [SerializeField] private MapSettings mapSettings;
     [SerializeField] private MapView mapView;
     [SerializeField] private Transform mapParent;
+    [SerializeField] private GameState gameState;
     
     private MapEntity _mapEntity;
     private Random _random;
@@ -44,7 +45,6 @@ public class GridManager : MonoBehaviour
 
     private void CreateTile(Vector3Int coordinates)
     {
-        Debug.Log(coordinates);
         var tileType = GetRandomTileType();
         var tilePreset = new TileData { TilePos = coordinates, TileType = tileType };
         mapSettings.Tiles.Add(tilePreset);
@@ -60,6 +60,12 @@ public class GridManager : MonoBehaviour
     private TileType GetRandomTileType()
     {
         return (TileType)_tileTypes.GetValue(_random.Next(_tileTypes.Length));
+    }
+
+    private void ProcessTileClick(TileEntity tile)
+    {
+        UnlockNeighboringTiles(tile.Position);
+        gameState.AddResource(tile.TileType);
     }
 
     #endregion
@@ -85,7 +91,7 @@ public class GridManager : MonoBehaviour
             var tile = _mapEntity.Tile(clickPos);
             if (tile != null)
             {
-                UnlockNeighboringTiles(tile.Position);
+                ProcessTileClick(tile);
             }
         }
     }
