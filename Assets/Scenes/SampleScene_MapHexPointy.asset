@@ -55,3 +55,195 @@ MonoBehaviour:
     - 0
     - 0
     TileType: 0
+  - TilePos: {x: -1, y: 3, z: -2}
+    Id: 1
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 1
+  - TilePos: {x: 1, y: 1, z: -2}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: -1, y: 2, z: -1}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: 1, y: 2, z: -3}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: 0, y: 1, z: -1}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: 0, y: 3, z: -3}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: -2, y: 4, z: -2}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: -2, y: 3, z: -1}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: -1, y: 4, z: -3}
+    Id: 1
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 1
+  - TilePos: {x: 1, y: 3, z: -4}
+    Id: 1
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 1
+  - TilePos: {x: 0, y: 4, z: -4}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: 2, y: 1, z: -3}
+    Id: 1
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 1
+  - TilePos: {x: 2, y: 2, z: -4}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: 3, y: 0, z: -3}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: 3, y: 1, z: -4}
+    Id: 0
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 0
+  - TilePos: {x: 2, y: 0, z: -2}
+    Id: 1
+    PrefabIndex: 0
+    MovableArea: 0
+    SideHeight:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    TileType: 1

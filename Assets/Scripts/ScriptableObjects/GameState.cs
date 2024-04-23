@@ -8,6 +8,7 @@ using UnityEngine;
 public class GameState : ScriptableObject
 {
     [SerializeField] private SerializableDictionary<TileType, int> resources;
+    public int Coins { get; private set; }
 
     #region Public Methods
     
@@ -18,6 +19,7 @@ public class GameState : ScriptableObject
         {
             resources[(TileType)type] = 0;
         }
+        Coins = 0;
     }
 
     public void AddResource(TileType type)
@@ -30,6 +32,11 @@ public class GameState : ScriptableObject
         if (resources[type] < amount)
             throw new ArgumentException("You're trying to spend more resources than you have");
         resources[type] -= amount;
+    }
+
+    public int GetResource(TileType type)
+    {
+        return resources[type];
     }
 
     #endregion
