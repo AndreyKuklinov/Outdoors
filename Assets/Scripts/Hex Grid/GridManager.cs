@@ -46,9 +46,11 @@ public class GridManager : MonoBehaviour
     private void CreateTile(Vector3Int coordinates)
     {
         var tileType = GetRandomTileType();
-        var tilePreset = new TileData { TilePos = coordinates, TileType = tileType };
+        var typeId = ((int)tileType).ToString();
+        var tilePreset = new TileData 
+            { TilePos = coordinates, TileType = tileType, Id = typeId };
         mapSettings.Tiles.Add(tilePreset);
-        var type = mapSettings.Presets.FirstOrDefault();
+        var type = mapSettings.Presets.FirstOrDefault(preset => preset.Id == typeId);
         _mapEntity.InsertTile(tilePreset, type);
         
         if (type == null)

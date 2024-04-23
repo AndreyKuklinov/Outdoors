@@ -24,89 +24,27 @@ MonoBehaviour:
   Rules:
     IsMovable: {fileID: 11400000, guid: ce303506d48d89d44abd552e9c465edb, type: 2}
   Presets:
-  - Type: Base Hex
-    Id: 
+  - Type: Type 1
+    Id: 0
     MapColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 0}
-    Prefab: {fileID: 919132149155446097, guid: 2de46c3bd225240b9a54abf2c0b7216c, type: 3}
+    Prefab: {fileID: 8778053626358118974, guid: 7782f5244843e3df8859f6ffb2ab51b2,
+      type: 3}
     GridOffset: 0
     Tags: []
     Prefabs:
-    - {fileID: 3223746030594493305, guid: 1535efc5099ddb43eb468a1080af9c26, type: 3}
+    - {fileID: 8778053626358118974, guid: 7782f5244843e3df8859f6ffb2ab51b2, type: 3}
+  - Type: Type 2
+    Id: 1
+    MapColor: {r: 1, g: 1, b: 1, a: 0.5}
+    Prefab: {fileID: 8510386861512563045, guid: ded480792d63731828633297462ce42a,
+      type: 3}
+    GridOffset: 0
+    Tags: []
+    Prefabs:
+    - {fileID: 8510386861512563045, guid: ded480792d63731828633297462ce42a, type: 3}
   Tiles:
-  - TilePos: {x: -1, y: 1, z: 0}
-    Id: 
-    PrefabIndex: 0
-    MovableArea: 1
-    SideHeight:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    TileType: 1
-  - TilePos: {x: 0, y: 0, z: 0}
-    Id: 
-    PrefabIndex: 0
-    MovableArea: 1
-    SideHeight:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    TileType: 0
-  - TilePos: {x: 0, y: 1, z: -1}
-    Id: 
-    PrefabIndex: 0
-    MovableArea: 1
-    SideHeight:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    TileType: 0
-  - TilePos: {x: 1, y: 0, z: -1}
-    Id: 
-    PrefabIndex: 0
-    MovableArea: 1
-    SideHeight:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    TileType: 0
-  - TilePos: {x: 1, y: 1, z: -2}
-    Id: 
-    PrefabIndex: 0
-    MovableArea: 1
-    SideHeight:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    TileType: 0
-  - TilePos: {x: -1, y: 2, z: -1}
-    Id: 
-    PrefabIndex: 0
-    MovableArea: 1
-    SideHeight:
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    - 0
-    TileType: 0
   - TilePos: {x: 0, y: 2, z: -2}
-    Id: 
+    Id: 0
     PrefabIndex: 0
     MovableArea: 1
     SideHeight:

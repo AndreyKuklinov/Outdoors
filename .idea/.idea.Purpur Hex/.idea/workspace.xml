@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4599787d-bc04-4698-b4b7-5924389d584f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Purpur Hex/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Purpur Hex/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Map Hex.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Map Hex.obj.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Map Hex.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Map Hex.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene_MapHexPointy.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene_MapHexPointy.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Hex Grid/GridManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Hex Grid/GridManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScriptableObjects/GameState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +104,7 @@
       <updated>1713875414798</updated>
       <workItem from="1713875418569" duration="10024000" />
       <workItem from="1713903641442" duration="700000" />
-      <workItem from="1713904385706" duration="333000" />
+      <workItem from="1713904385706" duration="2132000" />
     </task>
     <servers />
   </component>
