@@ -30,6 +30,7 @@ namespace RedBjorn.ProtoTiles
         public float Depth { get; set; }
         public float[] NeighbourMovable { get { return Data == null ? null : Data.SideHeight; } }
         public Vector3Int Position { get { return Data == null ? Vector3Int.zero : Data.TilePos; } }
+        public TileType TileType { get { return Data == null ? TileType.Unknown : Data.TileType; } }
 
         TileEntity() { }
 
@@ -43,7 +44,7 @@ namespace RedBjorn.ProtoTiles
 
         public override string ToString()
         {
-            return string.Format("Position: {0}. Vacant = {1}", Position, Vacant);
+            return string.Format("Position: {0}. Vacant = {1}. Type: {2}", Position, Vacant, TileType);
         }
 
         public void ChangeMovableAreaPreset(int area)

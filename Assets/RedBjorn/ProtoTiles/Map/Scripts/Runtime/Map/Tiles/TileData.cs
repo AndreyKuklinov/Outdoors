@@ -11,5 +11,6 @@ namespace RedBjorn.ProtoTiles
         public int PrefabIndex;
         public int MovableArea;
         public float[] SideHeight = new float[6] { 0f, 0f, 0f, 0f, 0f, 0f };
+        public TileType TileType;
     }
 }
