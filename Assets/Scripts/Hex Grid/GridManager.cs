@@ -36,8 +36,8 @@ public class GridManager : MonoBehaviour
         foreach (var shift in _neighborCoordinates)
         {
             var newCoordinates = coordinates + shift;
-            if (mapSettings.Tiles.Exists(tileData => tileData.TilePos.Equals(newCoordinates)))
-                return;
+            if (_mapEntity.Tile(newCoordinates) != null)
+                continue;
             CreateTile(newCoordinates);
         }
     }
@@ -53,7 +53,8 @@ public class GridManager : MonoBehaviour
         
         if (type == null)
             throw new NullReferenceException("Tile preset not found");
-        Instantiate(type.Prefab, mapParent);
+        var newTile = Instantiate(type.Prefab, mapParent);
+        newTile.transform.position = _mapEntity.WorldPosition(coordinates);
     }
 
     private TileType GetRandomTileType()
@@ -84,7 +85,6 @@ public class GridManager : MonoBehaviour
             var tile = _mapEntity.Tile(clickPos);
             if (tile != null)
             {
-                Debug.Log(tile);
                 UnlockNeighboringTiles(tile.Position);
             }
         }
