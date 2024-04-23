@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class CameraDrag : MonoBehaviour
 {
     #region Fields
     
     [SerializeField] private float dragSpeed = 1;
+    [SerializeField] private Camera mainCamera;
     private Vector3 _dragOrigin;
 
     #endregion
@@ -13,16 +15,16 @@ public class CameraDrag : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(1))
         {
             _dragOrigin = Input.mousePosition;
             return;
         }
  
-        if (!Input.GetMouseButton(0)) return;
+        if (!Input.GetMouseButton(1)) return;
  
-        Vector3 pos = Camera.main.ScreenToViewportPoint(_dragOrigin - Input.mousePosition);
-        Vector3 move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
+        var pos = mainCamera.ScreenToViewportPoint(_dragOrigin - Input.mousePosition);
+        var move = new Vector3(pos.x * dragSpeed, 0, pos.y * dragSpeed);
  
         transform.Translate(move, Space.World);  
     }
