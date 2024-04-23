@@ -243,6 +243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mapSettings: {fileID: 11400000, guid: bed3de176711a5803bd40ce72c09dc5d, type: 2}
   mapView: {fileID: 914785510}
+  mapParent: {fileID: 1655661465}
 --- !u!1001 &154954856
 PrefabInstance:
   m_ObjectHideFlags: 0

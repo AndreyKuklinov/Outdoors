@@ -7,22 +7,53 @@ using Random = System.Random;
 
 public class GridManager : MonoBehaviour
 {
+    #region Fields
+    
     [SerializeField] private MapSettings mapSettings;
     [SerializeField] private MapView mapView;
+    [SerializeField] private Transform mapParent;
     
     private MapEntity _mapEntity;
     private Random _random;
     private Array _tileTypes;
 
+    private static Vector3Int[] _neighborCoordinates = new[]
+    {
+        new Vector3Int(-1, 1, 0),
+        new Vector3Int(1, -1, 0),
+        new Vector3Int(-1, 0, 1),
+        new Vector3Int(1, 0, -1),
+        new Vector3Int(0, -1, 1),
+        new Vector3Int(0, 1, -1),
+    };
+
+    #endregion
+
     #region Private Methods
+    
+    private void UnlockNeighboringTiles(Vector3Int coordinates)
+    {
+        foreach (var shift in _neighborCoordinates)
+        {
+            var newCoordinates = coordinates + shift;
+            if (mapSettings.Tiles.Exists(tileData => tileData.TilePos.Equals(newCoordinates)))
+                return;
+            CreateTile(newCoordinates);
+        }
+    }
 
     private void CreateTile(Vector3Int coordinates)
     {
+        Debug.Log(coordinates);
         var tileType = GetRandomTileType();
-        var tilePreset = new TileData(coordinates, tileType);
+        var tilePreset = new TileData { TilePos = coordinates, TileType = tileType };
         mapSettings.Tiles.Add(tilePreset);
-        var type = mapSettings.Presets.FirstOrDefault(t => t.Id == tilePreset.Id);
+        var type = mapSettings.Presets.FirstOrDefault();
         _mapEntity.InsertTile(tilePreset, type);
+        
+        if (type == null)
+            throw new NullReferenceException("Tile preset not found");
+        Instantiate(type.Prefab, mapParent);
     }
 
     private TileType GetRandomTileType()
@@ -54,6 +85,7 @@ public class GridManager : MonoBehaviour
             if (tile != null)
             {
                 Debug.Log(tile);
+                UnlockNeighboringTiles(tile.Position);
             }
         }
     }
