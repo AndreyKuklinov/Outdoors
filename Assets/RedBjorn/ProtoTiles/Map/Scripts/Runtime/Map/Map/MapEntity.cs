@@ -45,7 +45,7 @@ namespace RedBjorn.ProtoTiles
             {
                 var tilePreset = settings.Tiles[i];
                 var type = settings.Presets.FirstOrDefault(t => t.Id == tilePreset.Id);
-                Tiles[tilePreset.TilePos] = new TileEntity(tilePreset, type, Rules);
+                InsertTile(tilePreset, type);
             }
             if (settings.Type == GridType.HexFlat)
             {
@@ -107,6 +107,17 @@ namespace RedBjorn.ProtoTiles
                 }
                 VerticesInner[i] = inner;
             }
+        }
+
+        /// <summary>
+        /// Insert tile entity
+        /// </summary>
+        /// <param name="tilePreset">Tile preset data</param>
+        /// <param name="type">Tile preset</param>
+        /// <returns></returns>
+        public void InsertTile(TileData tilePreset, TilePreset type)
+        {
+            Tiles[tilePreset.TilePos] = new TileEntity(tilePreset, type, Rules);
         }
 
         /// <summary>

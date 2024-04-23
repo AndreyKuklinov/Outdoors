@@ -30,7 +30,7 @@ namespace RedBjorn.ProtoTiles
         public float Depth { get; set; }
         public float[] NeighbourMovable { get { return Data == null ? null : Data.SideHeight; } }
         public Vector3Int Position { get { return Data == null ? Vector3Int.zero : Data.TilePos; } }
-        public TileType TileType { get { return Data == null ? TileType.Unknown : Data.TileType; } }
+        public TileType TileType { get { return Data == null ? TileType.Type1 : Data.TileType; } }
 
         TileEntity() { }
 
