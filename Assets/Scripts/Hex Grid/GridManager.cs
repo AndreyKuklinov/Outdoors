@@ -1,5 +1,6 @@
 using System;
 using RedBjorn.ProtoTiles;
+using RedBjorn.ProtoTiles.Example;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -18,6 +19,19 @@ public class GridManager : MonoBehaviour
         
         _mapEntity = new MapEntity(mapSettings, mapView);
         mapView.Init(_mapEntity);
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            var clickPos = MyInput.GroundPosition(_mapEntity.Settings.Plane());
+            var tile = _mapEntity.Tile(clickPos);
+            if (tile != null)
+            {
+                Debug.Log(tile);
+            }
+        }
     }
 
     #endregion
