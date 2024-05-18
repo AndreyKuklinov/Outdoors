@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2823c6443702331e48398db880e1c901, type: 3}
+  m_Name: New Random Tile Generator
+  m_EditorClassIdentifier: 
+  _possibleTiles:
+  - {fileID: 11400000, guid: 37eedc4c298ccd903a6f09d821d4f419, type: 2}
+  - {fileID: 11400000, guid: 4f4ba3b8cf2de2bf8baaf384cd7cc135, type: 2}
+  - {fileID: 11400000, guid: 465da32a39a919d0eb690cfb730e00af, type: 2}
+  - {fileID: 11400000, guid: bd889c09daf2642059bcb6e1c2e09eac, type: 2}
+  - {fileID: 11400000, guid: 162939ec8cd5633f29a7875431afbab4, type: 2}
+  - {fileID: 11400000, guid: c4561560fe56f04cabe59ecffc1699f4, type: 2}

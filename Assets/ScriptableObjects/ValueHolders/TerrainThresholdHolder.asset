@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bf350a25d3e95409f6c348491c6b3b, type: 3}
+  m_Name: TerrainThresholdHolder
+  m_EditorClassIdentifier: 
+  _proportionalTo: {fileID: 11400000, guid: 7fbe17dd05eb1aa6bb94b5c565c5780e, type: 2}
+  _startingMultiplier: 2
+  _multiplierIncrease: 0.5
