@@ -25,7 +25,10 @@ public class BuildingHand : MonoBehaviour
 
     void AddBuildingToHand(BuildingType buildingType)
     {
-        if(_handElements.Count >= MaxHandCapacity)
+//        if(buildingType == null)
+//            throw new NotImplementedException("Attempted to add null as building to hand");
+
+        if(_handElements.Count >= MaxHandCapacity || buildingType == null)
             return;
 
         var handElement = Instantiate(HandElementPrefab, this.transform);

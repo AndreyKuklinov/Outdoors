@@ -61,6 +61,12 @@ public class GameBoard : MonoBehaviour
         return (cellPos.x, cellPos.y);
     }
 
+    public bool HasUnrevealedNeighbours(int x, int y)
+    {
+        return _tileGrid.GetPositionsInRange(x, y, 1)
+            .Any(pos => !RevealedTiles.Contains(pos));
+    }
+
     public void ExploreTile(int x, int y, int explorationRange = 1)
     {
         RevealTile(x, y);

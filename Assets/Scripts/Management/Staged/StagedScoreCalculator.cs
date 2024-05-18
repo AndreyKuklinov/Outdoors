@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class ScoreCalculator : MonoBehaviour
+public class StagedScoreCalculator : ScoreCalculator
 {
-    [field: SerializeField] StageManager _stageManager;
+    [field: SerializeField] StagedGameManager _stageManager;
     [field: SerializeField] PointsProgressBar _progressBar;
 
-    public int Score
+    public override int GetScore()
         => _stageManager.CurrentStage * 100 + (int)(_progressBar.Progress * 100);
 }

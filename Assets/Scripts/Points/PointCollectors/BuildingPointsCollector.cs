@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildingPointsCollector : PointsCollector
 {
-    private int _pointsTotal;
+    public int PointsTotal { get; private set; }
 
     void Start()
     {
@@ -14,8 +14,8 @@ public class BuildingPointsCollector : PointsCollector
     protected override int CollectPoints(int x, int y, BuildingType buildingType)
     {
         var newTotal = GetNewPointsTotal();
-        var oldTotal = _pointsTotal;
-        _pointsTotal = newTotal;
+        var oldTotal = PointsTotal;
+        PointsTotal = newTotal;
 
         return newTotal - oldTotal;
     }

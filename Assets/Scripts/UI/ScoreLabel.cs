@@ -14,6 +14,6 @@ public class ScoreLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"Очки: {_scoreCalculator.Score}";
+        _text.text = $"Очки: {_scoreCalculator.GetScore()}";
     }
 }

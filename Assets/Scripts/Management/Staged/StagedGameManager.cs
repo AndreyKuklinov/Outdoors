@@ -1,8 +1,9 @@
 using System;
 using UnityEngine;
 
-public class StageManager : MonoBehaviour
+public class StagedGameManager : MonoBehaviour
 {
+    [SerializeField] private PointsCollector _incomeCollector;
     [SerializeField] private PointsProgressBar _progressBar;
     [SerializeField] private CoinManager _coinManager;
     [SerializeField] private StagedValueGenerator<int> _thresholdGenerator;
@@ -12,6 +13,7 @@ public class StageManager : MonoBehaviour
     void Start()
     {
         _progressBar.PointsTotalChanged += TryMoveToNextStage;
+        _incomeCollector.PointsCollected += _coinManager.IncreaseIncome;
         MoveToStage(CurrentStage);
     }
 

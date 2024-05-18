@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LevelLabel : MonoBehaviour
 {
-    [SerializeField] private StageManager _stageManager;
+    [SerializeField] private StagedGameManager _stageManager;
 
     private TextMeshProUGUI _text;
 

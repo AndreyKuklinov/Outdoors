@@ -10,12 +10,19 @@ public class TileExplorer : MonoBehaviour
 
     void ExploreTile(int x, int y)
     {
-        if(!_coinManager.CanPurchase || !_gameBoard.RevealedTiles.Contains((x, y)))
+        if(!_coinManager.CanPurchase || !_gameBoard.RevealedTiles.Contains((x, y))
+//            || ! _gameBoard.HasUnrevealedNeighbours(x, y)
+        )
             return;
+
+        var tileType = _gameBoard.GetTileAt(x, y);
+
+//        if(tileType.ExplorationBuildingType == null)
+//            return;
 
         _gameBoard.ExploreTile(x, y);
         _coinManager.PayForPurchase();
-        OnTileExplored(_gameBoard.GetTileAt(x, y));
+        OnTileExplored(tileType);
     }
 
     void Update()

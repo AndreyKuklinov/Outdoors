@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
-    [SerializeField] private PointsCollector _incomeCollector;
     [SerializeField] private int _purchaseCost;
 
     [field: SerializeField] public int CoinsCount { get; private set; }
@@ -16,7 +15,6 @@ public class CoinManager : MonoBehaviour
 
     void Start()
     {
-        _incomeCollector.PointsCollected += IncreaseIncome;
         InitialCoinsCount = CoinsCount;
     }
 
@@ -34,7 +32,7 @@ public class CoinManager : MonoBehaviour
         NextIncome = 0;
     }
 
-    void IncreaseIncome(int increase)
+    public void IncreaseIncome(int increase)
     {
         NextIncome += increase;
     }
