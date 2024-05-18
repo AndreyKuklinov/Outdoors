@@ -9,12 +9,15 @@ public class CoinManager : MonoBehaviour
     [field: SerializeField] public int CoinsCount { get; private set; }
     [field: SerializeField] public int NextIncome { get; private set; }
 
+    public int InitialCoinsCount { get; private set; }
+
     public bool CanPurchase
         => CoinsCount >= _purchaseCost;
 
     void Start()
     {
         _incomeCollector.PointsCollected += IncreaseIncome;
+        InitialCoinsCount = CoinsCount;
     }
 
     public void PayForPurchase()

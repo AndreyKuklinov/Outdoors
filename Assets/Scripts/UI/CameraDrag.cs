@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class CameraDrag : MonoBehaviour
 {
-    #region Variables
+#region Variables
 
     private Vector3 _origin;
     private Vector3 _difference;
@@ -12,7 +12,7 @@ public class CameraDrag : MonoBehaviour
 
     private bool _isDragging;
 
-    #endregion
+#endregion
 
     private void Awake() => _mainCamera = GetComponent<Camera>();
 
