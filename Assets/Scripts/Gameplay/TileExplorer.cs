@@ -5,22 +5,16 @@ public class TileExplorer : MonoBehaviour
 {
     [SerializeField] private GameBoard _gameBoard;
     [SerializeField] private CoinManager _coinManager;
-    [SerializeField] private bool _allowToExploreInlandTiles;
+    [SerializeField] private bool _canExploreInLand;
 
     public event Action<TileType> TileExplored;
 
     void ExploreTile(int x, int y)
     {
-        if(!_allowToExploreInlandTiles && !_gameBoard.HasUnrevealedNeighbours(x, y))
-            return;
-
-        if(!_coinManager.CanPurchase || !_gameBoard.RevealedTiles.Contains((x, y)))
+        if(!CanExplore(x, y))
             return;
 
         var tileType = _gameBoard.GetTileAt(x, y);
-
-        if(tileType.ExplorationBuildingType == null)
-            return;
 
         _gameBoard.ExploreTile(x, y);
         _coinManager.PayForPurchase();
@@ -30,6 +24,13 @@ public class TileExplorer : MonoBehaviour
     void Update()
     {
         HandleClick();
+    }
+
+    bool CanExplore(int x, int y)
+    {
+        return _coinManager.CanPurchase
+            && _gameBoard.RevealedTiles.Contains((x, y))
+            && (_canExploreInLand || _gameBoard.HasUnrevealedNeighbours(x, y));
     }
 
     void HandleClick()

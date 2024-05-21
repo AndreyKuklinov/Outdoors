@@ -15,6 +15,8 @@ public class BuildingHand : MonoBehaviour
     [field: SerializeField] public bool IsRandomBuildingModeOn { get; private set; }
     [field: SerializeField] public bool IsBuildingWithoutTerrainProhibited { get; private set; }
 
+    [SerializeField] private bool _exploredBuildingsYieldTiles;
+
     private List<BuildingHandElement> _handElements = new List<BuildingHandElement>();
     private BuildingHandElement _selectedBuilding;
 
@@ -75,6 +77,9 @@ public class BuildingHand : MonoBehaviour
             AddBuildingToHand(BuildingTypes[UnityEngine.Random.Range(0, BuildingTypes.Count)]);
             return;
         }
+
+        if(!_exploredBuildingsYieldTiles && tile as BuildingType != null)
+            return;
 
         AddBuildingToHand(tile.ExplorationBuildingType);
 //        Debug.Log(string.Join(' ', _buildingsInHand));
