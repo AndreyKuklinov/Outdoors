@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CoinsLabel : MonoBehaviour
 {
-    [SerializeField] private CoinManager _coinManager;
+    [SerializeField] private PurchaseManager _coinManager;
 
     private TextMeshProUGUI _text;
 
@@ -14,6 +14,7 @@ public class CoinsLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"Монеты: {(int)(_coinManager.CoinsCount / (float)_coinManager.InitialCoinsCount * 100)}%";
+//        _text.text = $"Монеты: {(int)(_coinManager.CoinsCount / (float)_coinManager.InitialCoinsCount * 100)}%";
+        _text.text = $"Монеты: {(int)(_coinManager.CoinsCount / (float)_coinManager.PurchaseCost)}";
     }
 }

@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class ScoreLabel : MonoBehaviour
 {
-    [SerializeField] private ScoreCalculator _scoreCalculator;
+    [SerializeField] private TerrainPointsCollector _terrainCollector;
+    [SerializeField] private BuildingPointsCollector _buildingsCollector;
 
     private TextMeshProUGUI _text;
 
@@ -14,6 +15,6 @@ public class ScoreLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"Очки: {_scoreCalculator.GetScore()}";
+        _text.text = $"Очки: {_terrainCollector.PointsTotal * _buildingsCollector.PointsTotal}";
     }
 }

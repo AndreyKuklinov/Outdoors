@@ -1,16 +1,15 @@
 using System;
 using UnityEngine;
 
-public class CoinManager : MonoBehaviour
+public class PurchaseManager : MonoBehaviour
 {
-    [SerializeField] private int _purchaseCost;
-
+    [field: SerializeField] public int PurchaseCost { get; private set; }
     [field: SerializeField] public int CoinsCount { get; private set; }
 
     public int InitialCoinsCount { get; private set; }
 
     public bool CanPurchase
-        => CoinsCount >= _purchaseCost;
+        => CoinsCount >= PurchaseCost;
 
     void Start()
     {
@@ -22,6 +21,6 @@ public class CoinManager : MonoBehaviour
         if(!CanPurchase)
             throw new Exception("A purchase was made with not enough coins");
 
-        CoinsCount -= _purchaseCost;
+        CoinsCount -= PurchaseCost;
     }
 }

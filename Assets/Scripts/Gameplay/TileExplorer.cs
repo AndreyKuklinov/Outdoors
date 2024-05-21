@@ -4,7 +4,7 @@ using UnityEngine;
 public class TileExplorer : MonoBehaviour
 {
     [SerializeField] private GameBoard _gameBoard;
-    [SerializeField] private CoinManager _coinManager;
+    [SerializeField] private PurchaseManager _coinManager;
     [SerializeField] private bool _canExploreInLand;
 
     public event Action<TileType> TileExplored;
