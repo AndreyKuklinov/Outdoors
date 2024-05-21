@@ -4,23 +4,7 @@ using UnityEngine;
 
 public class BuildingPointsCollector : PointsCollector
 {
-    public int PointsTotal { get; private set; }
-
-    void Start()
-    {
-        _gameBoard.BuildingPlaced += BuildingPlaced;
-    }
-
-    protected override int CollectPoints(int x, int y, BuildingType buildingType)
-    {
-        var newTotal = GetNewPointsTotal();
-        var oldTotal = PointsTotal;
-        PointsTotal = newTotal;
-
-        return newTotal - oldTotal;
-    }
-
-    protected int GetNewPointsTotal()
+    protected override int GetTotalAfterBuild(int x, int y, BuildingType buildingType)
     {
         var pointsTotal = 0;
 

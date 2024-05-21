@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PointsProgressBar : MonoBehaviour
 {
-    [SerializeField] private PointsCollector _pointsCollector;
     [SerializeField] private float _threshold;
     [SerializeField] private float _pointsTotal;
 
@@ -14,11 +13,6 @@ public class PointsProgressBar : MonoBehaviour
 
     public bool IsFull
         => _pointsTotal >= _threshold;
-
-    void Start()
-    {
-        _pointsCollector.PointsCollected += CollectPoints;
-    }
 
     public void SetThreshold(float threshold)
     {

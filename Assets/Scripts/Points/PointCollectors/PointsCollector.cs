@@ -3,15 +3,22 @@ using UnityEngine;
 
 public abstract class PointsCollector : MonoBehaviour
 {
-    public event Action<int> PointsCollected;
+    [field: SerializeField] public int PointsTotal { get; private set; }
 
     [SerializeField] protected GameBoard _gameBoard;
 
-    protected void BuildingPlaced(int x, int y, BuildingType buildingType)
+    public event Action PointsCollected;
+
+    void Start()
     {
-        var points = CollectPoints(x, y, buildingType);
-        PointsCollected?.Invoke(points);
+        _gameBoard.BuildingPlaced += BuildingPlaced;
     }
 
-    protected abstract int CollectPoints(int x, int y, BuildingType buildingType);
+    protected void BuildingPlaced(int x, int y, BuildingType buildingType)
+    {
+        PointsTotal = GetTotalAfterBuild(x, y, buildingType);
+        PointsCollected?.Invoke();
+    }
+
+    protected abstract int GetTotalAfterBuild(int x, int y, BuildingType buildingType);
 }
