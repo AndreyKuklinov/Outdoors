@@ -14,6 +14,6 @@ public class PopulationLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"Население: {_pointsCollector.PointsTotal}";
+        _text.text = $"Population: {_pointsCollector.PointsTotal}";
     }
 }

@@ -14,6 +14,6 @@ public class ProductionLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"Производство: {_pointsCollector.PointsTotal}";
+        _text.text = $"Production: {_pointsCollector.PointsTotal}";
     }
 }
