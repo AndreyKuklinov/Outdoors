@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a481c6c118af20ce09f9bc44944a70ba, type: 3}
   m_Name: Windmill
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: 740dbaf6cf1c53ffb8139afe111b738a, type: 2}
-  <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 162939ec8cd5633f29a7875431afbab4, type: 2}
+  <TileBase>k__BackingField: {fileID: 11400000, guid: 740dbaf6cf1c53ffb8139afe111b738a,
+    type: 2}
+  TooltipText: 'Windmill
+
+    +1 prod. for each adjacent plain.
+
+    +1 pop. for
+    each unique adjacent building of a different type.'
+  <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 162939ec8cd5633f29a7875431afbab4,
+    type: 2}

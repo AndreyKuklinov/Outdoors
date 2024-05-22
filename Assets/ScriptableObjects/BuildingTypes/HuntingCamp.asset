@@ -19,6 +19,6 @@ MonoBehaviour:
     +1 prod. for each adjacent forest.
 
     +1 pop.
-    for each non-unique adjacent building.'
+    for each non-unique adjacent building of a different type.'
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 37eedc4c298ccd903a6f09d821d4f419,
     type: 2}

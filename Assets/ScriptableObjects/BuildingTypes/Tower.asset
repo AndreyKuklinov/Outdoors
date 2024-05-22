@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2755d7d2a968fc22b447d43d8b8462a, type: 3}
   m_Name: Tower
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: e3e16090bd1cda92ca823f2e81b68405, type: 2}
-  <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 4f4ba3b8cf2de2bf8baaf384cd7cc135, type: 2}
+  <TileBase>k__BackingField: {fileID: 11400000, guid: e3e16090bd1cda92ca823f2e81b68405,
+    type: 2}
+  TooltipText: 'Tower
+
+    +1 prod. for each adjacent hill.
+
+    +1 pop. for each
+    building between this tower and another tower in a line.'
+  <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 4f4ba3b8cf2de2bf8baaf384cd7cc135,
+    type: 2}
