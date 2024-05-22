@@ -9,6 +9,8 @@ public class BuildingHandElement : MonoBehaviour, IPointerClickHandler
     [field:SerializeField] public float ScaleWhenSelected { get; private set; }
     [field: SerializeField] public Image Image { get; private set; }
 
+    [SerializeField] private TooltipTrigger _tooltipTrigger;
+
     public event EventHandler<BuildingHandElement> BuildingSelected;
     public event EventHandler<BuildingHandElement> BuildingDeselected;
 
@@ -18,6 +20,7 @@ public class BuildingHandElement : MonoBehaviour, IPointerClickHandler
     {
         BuildingType = buildingType;
         Image.sprite = buildingType.TileBase.sprite;
+        _tooltipTrigger.Text = buildingType.TooltipText;
     }
 
     public void Deselect()

@@ -93,6 +93,7 @@ MonoBehaviour:
     type: 2}
   <ScaleWhenSelected>k__BackingField: 1.25
   <Image>k__BackingField: {fileID: 3508281080582455189}
+  _tooltipTrigger: {fileID: -829532488843352914}
 --- !u!114 &-829532488843352914
 MonoBehaviour:
   m_ObjectHideFlags: 0

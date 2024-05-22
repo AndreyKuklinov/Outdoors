@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07813c29d84129587aa46ddb1747e825, type: 3}
   m_Name: HuntingCamp
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: e53cc06bc116c43b6a8c7da538ab5fd2, type: 2}
-  <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 37eedc4c298ccd903a6f09d821d4f419, type: 2}
+  <TileBase>k__BackingField: {fileID: 11400000, guid: e53cc06bc116c43b6a8c7da538ab5fd2,
+    type: 2}
+  TooltipText: 'Hunting camp
+
+    +1 prod. for each adjacent forest.
+
+    +1 pop.
+    for each non-unique adjacent building.'
+  <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 37eedc4c298ccd903a6f09d821d4f419,
+    type: 2}
