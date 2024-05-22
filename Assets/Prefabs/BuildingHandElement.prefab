@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4793433956278708163}
   - component: {fileID: 3508281080582455189}
   - component: {fileID: 8334989924173021989}
+  - component: {fileID: -829532488843352914}
   m_Layer: 5
   m_Name: BuildingHandElement
   m_TagString: Untagged
@@ -88,6 +89,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 601fc7cbfed6f3cf480a1781adf3edc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <BuildingType>k__BackingField: {fileID: 11400000, guid: 33327eed2b6b8937ea94c0b077ffe8a5, type: 2}
+  <BuildingType>k__BackingField: {fileID: 11400000, guid: 33327eed2b6b8937ea94c0b077ffe8a5,
+    type: 2}
   <ScaleWhenSelected>k__BackingField: 1.25
   <Image>k__BackingField: {fileID: 3508281080582455189}
+--- !u!114 &-829532488843352914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2165757417342386435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5ab5304c9567e563a11b643c898e44f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -3,15 +3,13 @@ using UnityEngine.EventSystems;
 
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    [SerializeField] Tooltip _tooltip;
-
-    public void Show()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        _tooltip.gameObject.SetActive(true);
+        TooltipManager.Manager.Show();
     }
 
-    public void Hide()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        _tooltip.gameObject.SetActive(false);
+        TooltipManager.Manager.Hide();
     }
 }

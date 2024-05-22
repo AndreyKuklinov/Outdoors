@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class TooltipManager : MonoBehaviour
 {
+    public static TooltipManager Manager;
+
     [SerializeField] Tooltip _tooltip;
+
+    void Start()
+    {
+        Manager = this;
+    }
 
     public void Show()
     {
