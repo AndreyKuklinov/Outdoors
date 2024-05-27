@@ -1300,7 +1300,7 @@ PrefabInstance:
     - target: {fileID: 2165757417342386435, guid: 9955edaaef3968184a5d9a77ccaaeed8,
         type: 3}
       propertyPath: m_Name
-      value: Building2
+      value: Slot2
       objectReference: {fileID: 0}
     - target: {fileID: 2165757417342386435, guid: 9955edaaef3968184a5d9a77ccaaeed8,
         type: 3}
@@ -2095,7 +2095,7 @@ PrefabInstance:
     - target: {fileID: 2165757417342386435, guid: 9955edaaef3968184a5d9a77ccaaeed8,
         type: 3}
       propertyPath: m_Name
-      value: Building1
+      value: Slot1
       objectReference: {fileID: 0}
     - target: {fileID: 2165757417342386435, guid: 9955edaaef3968184a5d9a77ccaaeed8,
         type: 3}
