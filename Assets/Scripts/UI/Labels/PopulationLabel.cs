@@ -1,9 +1,9 @@
 using TMPro;
 using UnityEngine;
 
-public class ProductionLabel : MonoBehaviour
+public class PopulationLabel : MonoBehaviour
 {
-    [SerializeField] private TerrainPointsCollector _pointsCollector;
+    [SerializeField] private BuildingPointsCollector _pointsCollector;
 
     private TextMeshProUGUI _text;
 
@@ -14,6 +14,6 @@ public class ProductionLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"Production: {_pointsCollector.PointsTotal}";
+        _text.text = $"{_pointsCollector.PointsTotal}";
     }
 }
