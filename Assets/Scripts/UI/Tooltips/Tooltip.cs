@@ -6,15 +6,17 @@ using UnityEngine.EventSystems;
 
 public class Tooltip : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _textMesh;
+    [SerializeField] private TextMeshProUGUI _header;
+    [SerializeField] private TextMeshProUGUI _body;
 
     public void Update()
     {
         transform.position = Input.mousePosition;
     }
 
-    public void SetText(string text)
+    public void SetText(string header, string body)
     {
-        _textMesh.text = text;
+        _body.text = body;
+        _header.text = header;
     }
 }

@@ -20,7 +20,7 @@ public class BuildingHandElement : MonoBehaviour, IPointerClickHandler
     {
         BuildingType = buildingType;
         Image.sprite = buildingType.TileBase.sprite;
-        _tooltipTrigger.Text = buildingType.TooltipText;
+        _tooltipTrigger.SetText(buildingType.TooltipText, buildingType.TileName);
     }
 
     public void Deselect()

@@ -14,12 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: 754f1a4a96b5a680084da0b92f07bb6b,
     type: 2}
-  TooltipText: 'Lighthouse
+  <TileName>k__BackingField: Lighthouse
+  TooltipText: '+1 prod. for each adjacent lake.
 
-    +1 prod. for each adjacent lake.
-
-    +1 pop. for
-    each adjacent building of a different type next to water.'
+    +1 pop. for each adjacent building
+    of a different type next to water.'
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 465da32a39a919d0eb690cfb730e00af,
     type: 2}
   <ScoringTerrainType>k__BackingField: {fileID: 11400000, guid: 465da32a39a919d0eb690cfb730e00af,

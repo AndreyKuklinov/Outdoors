@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public abstract class TileType : ScriptableObject
 {
     [field: SerializeField] public Tile TileBase {get; private set;}
-    
+    [field: SerializeField] public string TileName { get; private set; }
+
     [TextArea]
     public string TooltipText;
 
