@@ -8,7 +8,7 @@ public class Tooltip : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _textMesh;
 
-    void Update()
+    public void Update()
     {
         transform.position = Input.mousePosition;
     }
