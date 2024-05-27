@@ -7,9 +7,10 @@ public class BuildingHand : MonoBehaviour
 {
     [field: SerializeField] public GameBoard GameBoard { get; private set; }
     [field: SerializeField] public TileExplorer TileExplorer { get; private set; }
-    [field: SerializeReference] public BuildingHandElement HandElementPrefab { get; private set; }
-    [field: SerializeField] public BuildingType TestBuilding { get; private set; }
     [field: SerializeField] public List<BuildingType> BuildingTypes { get; private set; }
+
+    [SerializeField] private List<BuildingHandElement> _handElements;
+
     [field: SerializeField] public int MaxHandCapacity { get; private set; }
     [field: SerializeField] public bool IsTestingModeOn { get; private set; }
     [field: SerializeField] public bool IsRandomBuildingModeOn { get; private set; }
@@ -17,27 +18,29 @@ public class BuildingHand : MonoBehaviour
 
     [SerializeField] private bool _exploredBuildingsYieldTiles;
 
-    private List<BuildingHandElement> _handElements = new List<BuildingHandElement>();
     private BuildingHandElement _selectedBuilding;
+    private int _buildingsCount;
 
     void Start()
     {
         TileExplorer.TileExplored += TileExplored;
+
+        foreach(var handElement in _handElements)
+        {
+            handElement.BuildingSelected += BuildingSelected;
+            handElement.BuildingDeselected += BuildingDeselected;
+        }
     }
 
     void AddBuildingToHand(BuildingType buildingType)
     {
-//        if(buildingType == null)
-//            throw new NotImplementedException("Attempted to add null as building to hand");
-
-        if(_handElements.Count >= MaxHandCapacity || buildingType == null)
+        if(_buildingsCount >= MaxHandCapacity || buildingType == null)
             return;
 
-        var handElement = Instantiate(HandElementPrefab, this.transform);
-        _handElements.Add(handElement);
+        var handElement = _handElements.First(x => !x.gameObject.activeSelf);
         handElement.SetType(buildingType);
-        handElement.BuildingSelected += BuildingSelected;
-        handElement.BuildingDeselected += BuildingDeselected;
+        handElement.gameObject.SetActive(true);
+        _buildingsCount++;
     }
 
     void PlaceBuilding(int x, int y)
@@ -59,19 +62,14 @@ public class BuildingHand : MonoBehaviour
 
     void RemoveSelectedBuildingFromHand()
     {
-        Destroy(_selectedBuilding.gameObject);
-        _handElements.Remove(_selectedBuilding);
+        _selectedBuilding.gameObject.SetActive(false);
+        _selectedBuilding.Deselect();
         _selectedBuilding = null;
+        _buildingsCount--;
     }
 
     void TileExplored(TileType tile)
     {
-        if(IsTestingModeOn)
-        {
-            AddBuildingToHand(TestBuilding);
-            return;
-        }
-
         if(IsRandomBuildingModeOn)
         {
             AddBuildingToHand(BuildingTypes[UnityEngine.Random.Range(0, BuildingTypes.Count)]);
