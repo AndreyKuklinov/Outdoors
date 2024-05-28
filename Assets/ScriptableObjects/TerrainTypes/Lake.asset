@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Lake
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: 84f3eea5358d2a9c98f9999153b7b43c, type: 2}
+  <TileBase>k__BackingField: {fileID: 11400000, guid: 84f3eea5358d2a9c98f9999153b7b43c,
+    type: 2}
+  <TileName>k__BackingField: Lake
+  TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
+
+    Exploring
+    this tile will yield a lighthouse.'
   _canBeBuiltUpon: 0
-  _explorationBuildingType: {fileID: 11400000, guid: 2f03cc74499a984f2bb1754ef16671d2, type: 2}
+  _explorationBuildingType: {fileID: 11400000, guid: 2f03cc74499a984f2bb1754ef16671d2,
+    type: 2}

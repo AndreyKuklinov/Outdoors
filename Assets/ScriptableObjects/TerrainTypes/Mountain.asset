@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Mountain
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: 999ac4c55dcd62000ae5e9a076b186c5, type: 2}
+  <TileBase>k__BackingField: {fileID: 11400000, guid: 999ac4c55dcd62000ae5e9a076b186c5,
+    type: 2}
+  <TileName>k__BackingField: Mountains
+  TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
+
+    Exploring
+    this tile will yield a mine.'
   _canBeBuiltUpon: 1
-  _explorationBuildingType: {fileID: 11400000, guid: 4f05cce0d6fffbda6aa80098a3ca3b08, type: 2}
+  _explorationBuildingType: {fileID: 11400000, guid: 4f05cce0d6fffbda6aa80098a3ca3b08,
+    type: 2}

@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Forest
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: 2c48e353b9df4be9dbf573f6895d6b0b, type: 2}
+  <TileBase>k__BackingField: {fileID: 11400000, guid: 2c48e353b9df4be9dbf573f6895d6b0b,
+    type: 2}
+  <TileName>k__BackingField: Forest
+  TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
+
+    Exploring
+    this tile will yield a hunting camp.'
   _canBeBuiltUpon: 1
-  _explorationBuildingType: {fileID: 11400000, guid: 082646339dcecfd5bbe2bfe93587a018, type: 2}
+  _explorationBuildingType: {fileID: 11400000, guid: 082646339dcecfd5bbe2bfe93587a018,
+    type: 2}

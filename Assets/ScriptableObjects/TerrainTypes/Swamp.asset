@@ -12,6 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Swamp
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: fed4c184191d86874ace07adebaec022, type: 2}
+  <TileBase>k__BackingField: {fileID: 11400000, guid: fed4c184191d86874ace07adebaec022,
+    type: 2}
+  <TileName>k__BackingField: Swamp
+  TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
+
+    Exploring
+    this tile will yield a plantation.'
   _canBeBuiltUpon: 1
-  _explorationBuildingType: {fileID: 11400000, guid: 33327eed2b6b8937ea94c0b077ffe8a5, type: 2}
+  _explorationBuildingType: {fileID: 11400000, guid: 33327eed2b6b8937ea94c0b077ffe8a5,
+    type: 2}
