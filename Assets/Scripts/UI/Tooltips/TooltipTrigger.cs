@@ -3,8 +3,10 @@ using UnityEngine.EventSystems;
 
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public string Body;
     public string Header;
+    
+    [TextArea]
+     public string Body;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
