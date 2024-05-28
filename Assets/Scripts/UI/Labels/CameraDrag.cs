@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CameraDrag : MonoBehaviour
 {
+    public event Action OnCameraDrag;
+
 #region Variables
 
     private Vector3 _origin;
@@ -20,6 +23,7 @@ public class CameraDrag : MonoBehaviour
     {
         if (ctx.started) _origin = GetMousePosition;
         _isDragging = ctx.started || ctx.performed;
+        
     }
 
     private void LateUpdate()
@@ -28,6 +32,7 @@ public class CameraDrag : MonoBehaviour
 
         _difference = GetMousePosition - transform.position;
         transform.position = _origin - _difference;
+        OnCameraDrag?.Invoke();
     }
 
     private Vector3 GetMousePosition => _mainCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue());

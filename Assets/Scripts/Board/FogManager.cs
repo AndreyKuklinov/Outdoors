@@ -8,18 +8,14 @@ public class FogManager : MonoBehaviour
     [SerializeField] Tilemap _tileMap;
     [SerializeField] Tile _fogTile;
     [SerializeField] Camera _camera;
+    [SerializeField] CameraDrag _cameraDrag;
     [SerializeField] int _generationRadius;   
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         GenerateTilesAroundCamera();
+        _cameraDrag.OnCameraDrag += GenerateTilesAroundCamera;
     }
 
     void GenerateTilesAroundCamera()

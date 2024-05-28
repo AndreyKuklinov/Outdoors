@@ -2569,6 +2569,7 @@ MonoBehaviour:
   _tileMap: {fileID: 1753937008}
   _fogTile: {fileID: 11400000, guid: 8fe9bf32ac60ef47aa36fc6739485cc3, type: 2}
   _camera: {fileID: 519420031}
+  _cameraDrag: {fileID: 519420033}
   _generationRadius: 10
 --- !u!1 &1766759846
 GameObject:
