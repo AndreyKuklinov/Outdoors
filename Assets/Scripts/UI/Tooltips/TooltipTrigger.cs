@@ -3,19 +3,21 @@ using UnityEngine.EventSystems;
 
 public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    [SerializeField] TooltipManager _tooltipManager;
+ 
     public string Header;
     
     [TextArea]
-     public string Body;
+    public string Body;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        TooltipManager.Manager.Show(Header, Body);
+        _tooltipManager.Show(Header, Body);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        TooltipManager.Manager.Hide();
+        _tooltipManager.Hide();
     }
 
     public void SetText(string body, string header)

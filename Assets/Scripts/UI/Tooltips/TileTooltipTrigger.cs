@@ -5,49 +5,28 @@ using UnityEngine.Tilemaps;
 
 public class TileTooltipTrigger : MonoBehaviour
 {
+    [SerializeField] TooltipManager _tooltipManager;
+    [SerializeField] TileMouseTrigger _tileMouseTrigger;
     [SerializeField] GameBoard _gameBoard;
 
-    private Vector3 _prevMousePos;
-    private (int x, int y) _lastCellPos;
-    private bool _isPointerOnTile;
-
-    void Update()
+    void Start()
     {
-        if(CheckIfMouseMoved())
-            MouseMoved();        
+        _tileMouseTrigger.OnPointerEnterTile += PointerEnterTile;
+        _tileMouseTrigger.OnPointerExitTile += PointerExitTile;
     }
 
-    void MouseMoved()
+    public void PointerEnterTile((int tileX, int tileY) tilePos)
     {
-        var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var cellPos = _gameBoard.WorldToCell(worldPoint);
-        var tile = _gameBoard.GetTileAt(cellPos.x, cellPos.y);
+        var tile = _gameBoard.GetTileAt(tilePos.tileX, tilePos.tileY);
 
         if(tile == null)
-        {
-            if(_isPointerOnTile)
-                TooltipManager.Manager.Hide();
-
-            _isPointerOnTile = false;
             return;
-        }
 
-        if(cellPos != _lastCellPos && _isPointerOnTile) 
-            TooltipManager.Manager.Hide();
-
-        _isPointerOnTile = true;
-        _lastCellPos = cellPos;
-        TooltipManager.Manager.Show(tile.TileName, tile.TooltipText);
+        _tooltipManager.Show(tile.TileName, tile.TooltipText);
     }
 
-    bool CheckIfMouseMoved()
+    public void PointerExitTile((int tileX, int tileY) tilePos)
     {
-        var mousePos = Input.mousePosition;
-
-        if(mousePos == _prevMousePos)
-            return false;
-
-        _prevMousePos = mousePos;
-        return true;
+        _tooltipManager.Hide();
     }
 }

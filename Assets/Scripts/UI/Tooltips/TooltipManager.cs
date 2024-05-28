@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class TooltipManager : MonoBehaviour
 {
-    public static TooltipManager Manager;
-
     [SerializeField] Tooltip _tooltip;
     [SerializeField] float _delayBeforeShown;
 
     private bool _isPointerOnTrigger;
-
-    void Start()
-    {
-        Manager = this;
-    }
 
     public void Show(string header, string body)
     {
