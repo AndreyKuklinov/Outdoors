@@ -172,6 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tooltip: {fileID: 558995052}
+  _delayBeforeShown: 0.4
 --- !u!1 &124673723
 GameObject:
   m_ObjectHideFlags: 0
