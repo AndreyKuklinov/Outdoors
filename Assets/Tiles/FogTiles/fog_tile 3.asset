@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: fog_tile
+  m_Name: fog_tile 3
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 4c70dfd55b00c1bd28640b4fbe5564c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 29c65a2ffa6238a59ae4e4aa3dee8fc8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

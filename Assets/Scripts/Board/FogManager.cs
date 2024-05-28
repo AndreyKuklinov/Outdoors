@@ -6,12 +6,11 @@ using UnityEngine.Tilemaps;
 public class FogManager : MonoBehaviour
 {
     [SerializeField] Tilemap _tileMap;
-    [SerializeField] Tile _fogTile;
+    [SerializeField] Tile[] _fogTiles;
     [SerializeField] Camera _camera;
     [SerializeField] CameraDrag _cameraDrag;
     [SerializeField] int _generationRadius;   
 
-    // Start is called before the first frame update
     void Start()
     {
         GenerateTilesAroundCamera();
@@ -27,8 +26,11 @@ public class FogManager : MonoBehaviour
         {
             for(var y = tilePosition.y - _generationRadius; y <= tilePosition.y + _generationRadius; y++)
             {
-                _tileMap.SetTile(new Vector3Int(x, y, 0), _fogTile);
+                _tileMap.SetTile(new Vector3Int(x, y, 0), PickRandomFogTile());
             }
         }
     }
+
+    Tile PickRandomFogTile()
+        => _fogTiles[Random.Range(0, _fogTiles.Length)];
 }
