@@ -18,7 +18,7 @@ MonoBehaviour:
   TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
 
     Exploring
-    this tile will yield a windmill.'
+    this tile will yield a Windmill.'
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 6dfb2eae8d1c201218f2dbe9b0fc5402,
     type: 2}

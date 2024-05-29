@@ -18,7 +18,7 @@ MonoBehaviour:
   TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
 
     Exploring
-    this tile will yield a plantation.'
+    this tile will yield a Plantation.'
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 33327eed2b6b8937ea94c0b077ffe8a5,
     type: 2}

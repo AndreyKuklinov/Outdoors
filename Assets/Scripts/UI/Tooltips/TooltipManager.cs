@@ -7,26 +7,27 @@ public class TooltipManager : MonoBehaviour
     [SerializeField] Tooltip _tooltip;
     [SerializeField] float _delayBeforeShown;
 
-    private bool _isPointerOnTrigger;
+    private IEnumerator _currentCoroutine;
 
     public void Show(string header, string body)
     {
-        _isPointerOnTrigger = true;
         _tooltip.SetText(header, body);
         _tooltip.Update();
-        StartCoroutine(ShowCoroutine());
+        _currentCoroutine = DelayShowCoroutine();
+        StartCoroutine(_currentCoroutine);
     }
 
     public void Hide()
     {
-        _isPointerOnTrigger = false;
         _tooltip.gameObject.SetActive(false);
+
+        if(_currentCoroutine != null)
+            StopCoroutine(_currentCoroutine);
     }
 
-    IEnumerator ShowCoroutine()
+    IEnumerator DelayShowCoroutine()
     {
         yield return new WaitForSeconds(_delayBeforeShown);
-        if(_isPointerOnTrigger)
-            _tooltip.gameObject.SetActive(true);
+        _tooltip.gameObject.SetActive(true);
     }
 }

@@ -18,7 +18,7 @@ MonoBehaviour:
   TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
 
     Exploring
-    this tile will yield a lighthouse.'
+    this tile will yield a Lighthouse.'
   _canBeBuiltUpon: 0
   _explorationBuildingType: {fileID: 11400000, guid: 2f03cc74499a984f2bb1754ef16671d2,
     type: 2}
