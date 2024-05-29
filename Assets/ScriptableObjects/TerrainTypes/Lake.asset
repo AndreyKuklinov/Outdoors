@@ -15,10 +15,10 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 84f3eea5358d2a9c98f9999153b7b43c,
     type: 2}
   <TileName>k__BackingField: Lake
-  TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
+  TooltipText: 'Right click to explore unknown adjacent tiles.
 
-    Exploring
-    this tile will yield a Lighthouse.'
+    Exploration will
+    yield a Lighthouse.'
   _canBeBuiltUpon: 0
   _explorationBuildingType: {fileID: 11400000, guid: 2f03cc74499a984f2bb1754ef16671d2,
     type: 2}

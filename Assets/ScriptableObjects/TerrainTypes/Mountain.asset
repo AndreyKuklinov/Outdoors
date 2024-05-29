@@ -15,10 +15,10 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 999ac4c55dcd62000ae5e9a076b186c5,
     type: 2}
   <TileName>k__BackingField: Mountains
-  TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
+  TooltipText: 'Right click to explore unknown adjacent tiles.
 
-    Exploring
-    this tile will yield a Mine.'
+    Exploration will
+    yield a Mine.'
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 4f05cce0d6fffbda6aa80098a3ca3b08,
     type: 2}

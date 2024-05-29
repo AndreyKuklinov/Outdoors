@@ -15,10 +15,10 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 6cdec2bf2c837f0d6b4ffc2f123be16f,
     type: 2}
   <TileName>k__BackingField: Plain
-  TooltipText: 'Right click to explore, if this tile is next to the edge of the board.
+  TooltipText: 'Right click to explore unknown adjacent tiles.
 
-    Exploring
-    this tile will yield a Windmill.'
+    Exploration will
+    yield a Windmill.'
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 6dfb2eae8d1c201218f2dbe9b0fc5402,
     type: 2}

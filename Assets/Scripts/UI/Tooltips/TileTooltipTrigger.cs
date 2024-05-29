@@ -13,6 +13,11 @@ public class TileTooltipTrigger : MonoBehaviour
     {
         _tileMouseTrigger.OnPointerEnterTile += PointerEnterTile;
         _tileMouseTrigger.OnPointerExitTile += PointerExitTile;
+
+        _gameBoard.BuildingPlaced += (int x, int y, BuildingType buildingType) => {
+            _tooltipManager.Hide();
+            PointerEnterTile((x, y));
+        };
     }
 
     public void PointerEnterTile((int tileX, int tileY) tilePos)
