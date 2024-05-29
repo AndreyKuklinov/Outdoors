@@ -12,7 +12,6 @@ public class TooltipManager : MonoBehaviour
     public void Show(string header, string body)
     {
         _tooltip.SetText(header, body);
-        _tooltip.Update();
         _currentCoroutine = DelayShowCoroutine();
         StartCoroutine(_currentCoroutine);
     }
@@ -29,5 +28,6 @@ public class TooltipManager : MonoBehaviour
     {
         yield return new WaitForSeconds(_delayBeforeShown);
         _tooltip.gameObject.SetActive(true);
+        _tooltip.Update();
     }
 }
