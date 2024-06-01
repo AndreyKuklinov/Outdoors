@@ -8,7 +8,7 @@ public class GameSeedHolder : MonoBehaviour
     [SerializeField] private TMP_InputField _inputField;
 
     public int Seed
-        => _inputField.GetHashCode();
+        => _inputField.text.GetHashCode();
 
     void Start()
     {
