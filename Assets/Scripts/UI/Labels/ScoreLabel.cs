@@ -15,6 +15,6 @@ public class ScoreLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"SCORE: {_terrainCollector.PointsTotal * _buildingsCollector.PointsTotal}";
+        _text.text = $"Score: {_terrainCollector.PointsTotal * _buildingsCollector.PointsTotal}";
     }
 }

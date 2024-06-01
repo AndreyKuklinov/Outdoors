@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 181.7362, y: 19.1696}
+  m_SizeDelta: {x: 181.7362, y: 17.9921}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6879318631392410829
 CanvasRenderer:
@@ -67,8 +67,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: BUILDING NAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 6b7818192be311fb69da4b79cab25cbc, type: 2}
+  m_sharedMaterial: {fileID: 985302375857179727, guid: 6b7818192be311fb69da4b79cab25cbc,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -92,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 1
@@ -204,8 +205,8 @@ MonoBehaviour:
     +1 pop. for each adjacent tile
     next to water.'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 81f040f6e4361ef429afa387db5747d3, type: 2}
-  m_sharedMaterial: {fileID: -6674311249191839480, guid: 81f040f6e4361ef429afa387db5747d3,
+  m_fontAsset: {fileID: 11400000, guid: 6b7818192be311fb69da4b79cab25cbc, type: 2}
+  m_sharedMaterial: {fileID: 985302375857179727, guid: 6b7818192be311fb69da4b79cab25cbc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -230,12 +231,12 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.65
+  m_fontSize: 12
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 1
-  m_fontSizeMax: 118
+  m_fontSizeMax: 12
   m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
