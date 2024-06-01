@@ -15,7 +15,7 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 740dbaf6cf1c53ffb8139afe111b738a,
     type: 2}
   <TileName>k__BackingField: Windmill
-  TooltipText: '+1 prod. for each adjacent plain when placed.
+  TooltipText: '+1 prod. for each adjacent Plain when placed.
 
     +1 pop. for each
     unique adjacent building of a different type.'
