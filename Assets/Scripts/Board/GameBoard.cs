@@ -20,6 +20,7 @@ public class GameBoard : MonoBehaviour
     void Awake()
     {
         _tilemap = GetComponent<Tilemap>();
+        _tileGenerator.SetSeed(SceneNavigator.GameSeed);
         _tileGrid = new HexGrid<TileType>(_tileGenerator);
 
         ExploreTile(0,0, _initialRevealedRange);

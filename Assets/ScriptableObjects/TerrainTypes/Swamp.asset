@@ -15,10 +15,10 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: fed4c184191d86874ace07adebaec022,
     type: 2}
   <TileName>k__BackingField: Swamp
-  TooltipText: 'Right click to explore adjacent tiles.
+  TooltipText: 'Right-click to reveal adjacent tiles.
 
-    Exploration will yield
-    a Plantation.'
+    Yields a Plantation when
+    clicked.'
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 33327eed2b6b8937ea94c0b077ffe8a5,
     type: 2}

@@ -15,10 +15,9 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 85c4e2135e51190fc9ee8375639f4701,
     type: 2}
   <TileName>k__BackingField: Hills
-  TooltipText: 'Right click to explore adjacent tiles.
+  TooltipText: 'Right-click to reveal adjacent tiles.
 
-    Exploration will yield
-    a Tower.'
+    Yields a Tower when clicked.'
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 4eaa2684b3d14fa2a9885dd75b5ecada,
     type: 2}

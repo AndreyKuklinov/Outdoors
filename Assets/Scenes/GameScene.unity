@@ -819,7 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tooltip: {fileID: 1573796126}
-  _delayBeforeShown: 0.6
+  _delayBeforeShown: 0.8
 --- !u!114 &549372863
 MonoBehaviour:
   m_ObjectHideFlags: 0

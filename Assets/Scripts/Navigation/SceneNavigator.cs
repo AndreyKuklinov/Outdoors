@@ -5,16 +5,26 @@ using UnityEngine.SceneManagement;
 
 public static class SceneNavigator
 {
-    public static string GameSeed { get; private set; }
+    public static int GameSeed { get; private set; }
 
-    public static void LoadMainGame(string seed)
+    public static void LoadGame(int seed)
     {
         GameSeed = seed;
         SceneManager.LoadScene("GameScene");
     }
 
+    public static void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public static void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public static void Quit()
+    {
+        Application.Quit();
     }
 }
