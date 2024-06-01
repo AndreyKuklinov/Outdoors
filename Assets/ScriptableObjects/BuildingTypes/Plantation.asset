@@ -15,9 +15,9 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: f752ab1a37165e65683868c2951001c8,
     type: 2}
   <TileName>k__BackingField: Plantation
-  TooltipText: '+1 prod. for each adjacent swamp.
+  TooltipText: '+1 prod. for each adjacent Swamp when placed.
 
-    +1 pop. for each adjacent
-    plantation.'
+    +1 pop. for each
+    adjacent Plantation.'
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: c4561560fe56f04cabe59ecffc1699f4,
     type: 2}

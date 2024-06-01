@@ -15,9 +15,9 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: f9c2d4067c90d47d4b1fbc5f1a5b6821,
     type: 2}
   <TileName>k__BackingField: Mine
-  TooltipText: '+1 prod. for each adjacent mountain.
+  TooltipText: '+1 prod. for each adjacent Mountain when placed.
 
-    +1 pop. for each mine one
-    tile away.'
+    +1 pop. for
+    each Mine one tile away.'
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: bd889c09daf2642059bcb6e1c2e09eac,
     type: 2}

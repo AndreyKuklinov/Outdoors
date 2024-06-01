@@ -15,9 +15,9 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: e53cc06bc116c43b6a8c7da538ab5fd2,
     type: 2}
   <TileName>k__BackingField: Hunting Camp
-  TooltipText: '+1 prod. for each adjacent forest.
+  TooltipText: '+1 prod. for each adjacent Forest when placed.
 
-    +1 pop. for each non-unique
-    adjacent building of a different type.'
+    +1 pop. for each
+    non-unique adjacent building of a different type.'
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 37eedc4c298ccd903a6f09d821d4f419,
     type: 2}
