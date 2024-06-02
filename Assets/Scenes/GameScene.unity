@@ -727,7 +727,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1024,7 +1024,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipManager: {fileID: 138078092}
   Header: Production
-  Body: To increase your production, follow the rules, written on a specific building
+  Body: "To increase your production, place buildings next to terrain of the same
+    color. \nFor more information hover your mouse over any building."
 --- !u!1 &685212755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1346,8 +1347,9 @@ GameObject:
   - component: {fileID: 902998457}
   - component: {fileID: 902998456}
   - component: {fileID: 902998458}
+  - component: {fileID: 902998459}
   m_Layer: 0
-  m_Name: MouseTriggers
+  m_Name: MouseControllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1394,6 +1396,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mouseMovedDetector: {fileID: 902998456}
   _gameBoard: {fileID: 8888479305707112713}
+--- !u!114 &902998459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902998455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a660f529f206e739c8cdc7858eb103, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _raycaster: {fileID: 8888479305707112715}
+  _tileExplorer: {fileID: 2023968723}
+  _buildingHand: {fileID: 830112275387941651}
 --- !u!1001 &917834609
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1619,51 +1636,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1037872631
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1037872633}
-  - component: {fileID: 1037872632}
-  m_Layer: 0
-  m_Name: TileRaycaster
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1037872632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037872631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db72b50d181d0e212942b5e4befe50d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemap: {fileID: 1412103455528014944}
---- !u!4 &1037872633
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037872631}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1106.9753, y: 553.2115, z: 2.759771}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049168174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,7 +1715,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipManager: {fileID: 138078092}
   Header: Population
-  Body: To increase your population, follow the rules, written on a specific building
+  Body: "To increase your population, place buildings near each other in a certain
+    way. \nFor more information hover your mouse over any building."
 --- !u!1 &1065550028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,7 +2881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adb05a8d127d7c42daa0f89ac0c45a16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _raycaster: {fileID: 1037872632}
+  _raycaster: {fileID: 8888479305707112715}
   _gameBoard: {fileID: 8888479305707112713}
   _coinManager: {fileID: 1065550030}
   _canExploreInLand: 0
@@ -3333,6 +3306,7 @@ GameObject:
   - component: {fileID: 926659911218359967}
   - component: {fileID: 8888479305707112713}
   - component: {fileID: 8888479305707112714}
+  - component: {fileID: 8888479305707112715}
   m_Layer: 0
   m_Name: GameBoard
   m_TagString: Untagged
@@ -3390,6 +3364,19 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!114 &8888479305707112715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8427863439895283940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db72b50d181d0e212942b5e4befe50d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1412103455528014944}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3403,4 +3390,3 @@ SceneRoots:
   - {fileID: 391643304}
   - {fileID: 91486316}
   - {fileID: 902998457}
-  - {fileID: 1037872633}

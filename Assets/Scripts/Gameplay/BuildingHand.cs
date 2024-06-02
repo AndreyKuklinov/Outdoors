@@ -18,6 +18,9 @@ public class BuildingHand : MonoBehaviour
 
     [SerializeField] private bool _exploredBuildingsYieldTiles;
 
+    public bool IsBuildingSelected 
+        => _selectedBuilding != null;
+
     private BuildingHandElement _selectedBuilding;
     private int _buildingsCount;
 
@@ -43,7 +46,7 @@ public class BuildingHand : MonoBehaviour
         _buildingsCount++;
     }
 
-    void PlaceBuilding(int x, int y)
+    public void PlaceBuilding(int x, int y)
     {
         if(_selectedBuilding == null || !GameBoard.RevealedTiles.Contains((x, y)) || !GameBoard.GetTileAt(x, y).CanBeBuiltUpon)
             return;
@@ -98,16 +101,5 @@ public class BuildingHand : MonoBehaviour
     {
         if(_selectedBuilding == handElement)
             _selectedBuilding = null;
-    }
-
-    void Update()
-    {
-        var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var cellPos = GameBoard.WorldToCell(worldPoint);
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            PlaceBuilding(cellPos.x, cellPos.y);
-        }
     }
 }
