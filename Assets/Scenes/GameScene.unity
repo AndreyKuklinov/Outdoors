@@ -2624,7 +2624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1753937006
 Transform:
   m_ObjectHideFlags: 0
@@ -2742,8 +2742,6 @@ MonoBehaviour:
   _tileMap: {fileID: 1753937008}
   _fogTiles:
   - {fileID: 11400000, guid: 8ca6f0eba3acc0990ac15df39ed1b567, type: 2}
-  - {fileID: 11400000, guid: 3ee3740e18ce081fa92ebbf71e9da914, type: 2}
-  - {fileID: 11400000, guid: 8fe9bf32ac60ef47aa36fc6739485cc3, type: 2}
   _camera: {fileID: 519420031}
   _cameraDrag: {fileID: 519420033}
   _generationRadius: 10

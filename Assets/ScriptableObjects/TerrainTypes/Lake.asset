@@ -18,7 +18,9 @@ MonoBehaviour:
   TooltipText: 'Right-click to reveal adjacent tiles.
 
     Yields a Lighthouse when
-    clicked.'
+    clicked.
+
+    Cannot be built upon.'
   _canBeBuiltUpon: 0
   _explorationBuildingType: {fileID: 11400000, guid: 2f03cc74499a984f2bb1754ef16671d2,
     type: 2}
