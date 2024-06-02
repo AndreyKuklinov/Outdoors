@@ -15,10 +15,9 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 2c48e353b9df4be9dbf573f6895d6b0b,
     type: 2}
   <TileName>k__BackingField: Forest
-  TooltipText: 'Right-click to reveal adjacent tiles.
+  TooltipText: 'Click to reveal adjacent tiles.
 
-    Yields a Hunting Camp
-    when clicked.'
+    Yields a Hunting Camp when clicked.'
   FoggyVersion: {fileID: 11400000, guid: 49117a8a535fa00fb9f570b801bb37f1, type: 2}
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 082646339dcecfd5bbe2bfe93587a018,

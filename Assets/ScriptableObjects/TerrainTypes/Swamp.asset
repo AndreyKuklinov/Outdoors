@@ -15,10 +15,9 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: fed4c184191d86874ace07adebaec022,
     type: 2}
   <TileName>k__BackingField: Swamp
-  TooltipText: 'Right-click to reveal adjacent tiles.
+  TooltipText: 'Click to reveal adjacent tiles.
 
-    Yields a Plantation when
-    clicked.'
+    Yields a Plantation when clicked.'
   FoggyVersion: {fileID: 11400000, guid: 6ff018e5d975949788e27b805d088bda, type: 2}
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 33327eed2b6b8937ea94c0b077ffe8a5,

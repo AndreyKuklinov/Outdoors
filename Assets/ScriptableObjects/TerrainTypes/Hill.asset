@@ -15,7 +15,7 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 85c4e2135e51190fc9ee8375639f4701,
     type: 2}
   <TileName>k__BackingField: Hill
-  TooltipText: 'Right-click to reveal adjacent tiles.
+  TooltipText: 'Click to reveal adjacent tiles.
 
     Yields a Tower when clicked.'
   FoggyVersion: {fileID: 11400000, guid: 7207164a28023610086bee8636eac3d1, type: 2}

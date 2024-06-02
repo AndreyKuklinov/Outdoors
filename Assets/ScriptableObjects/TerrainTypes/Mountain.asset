@@ -15,7 +15,7 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 999ac4c55dcd62000ae5e9a076b186c5,
     type: 2}
   <TileName>k__BackingField: Mountain
-  TooltipText: 'Right-click to reveal adjacent tiles.
+  TooltipText: 'Click to reveal adjacent tiles.
 
     Yields a Mine when clicked.'
   FoggyVersion: {fileID: 11400000, guid: f0613ee60bbcf880c8ebfe5c7f589060, type: 2}

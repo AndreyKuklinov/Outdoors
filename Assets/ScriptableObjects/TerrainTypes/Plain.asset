@@ -15,10 +15,9 @@ MonoBehaviour:
   <TileBase>k__BackingField: {fileID: 11400000, guid: 6cdec2bf2c837f0d6b4ffc2f123be16f,
     type: 2}
   <TileName>k__BackingField: Plain
-  TooltipText: 'Right-click to reveal adjacent tiles.
+  TooltipText: 'Click to reveal adjacent tiles.
 
-    Yields a Windmill when
-    clicked.'
+    Yields a Windmill when clicked.'
   FoggyVersion: {fileID: 11400000, guid: 436fe788ee27fc2a58e80349a16b6fd0, type: 2}
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 6dfb2eae8d1c201218f2dbe9b0fc5402,
