@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class CameraDrag : MonoBehaviour
 {
+    [SerializeField] GameObject _modalWindow;
     public event Action OnCameraDrag;
 
 #region Variables
@@ -21,6 +23,9 @@ public class CameraDrag : MonoBehaviour
 
     public void OnDrag(InputAction.CallbackContext ctx)
     {
+        if(_modalWindow.activeSelf)
+            return;
+
         if (ctx.started) _origin = GetMousePosition;
         _isDragging = ctx.started || ctx.performed;
         
