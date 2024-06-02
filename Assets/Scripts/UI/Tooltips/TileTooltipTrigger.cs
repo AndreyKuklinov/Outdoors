@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Tilemaps;
 
 public class TileTooltipTrigger : MonoBehaviour
@@ -24,7 +25,7 @@ public class TileTooltipTrigger : MonoBehaviour
     {
         var tile = _gameBoard.GetTileAt(tilePos.tileX, tilePos.tileY);
 
-        if(tile == null)
+        if(tile == null || EventSystem.current.IsPointerOverGameObject())
             return;
 
         _tooltipManager.Show(tile.TileName, tile.TooltipText);

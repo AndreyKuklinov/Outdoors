@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class TooltipManager : MonoBehaviour
 {
+    [SerializeField] bool _isBlockedByUI;
     [SerializeField] Tooltip _tooltip;
     [SerializeField] float _delayBeforeShown;
 
@@ -27,7 +29,11 @@ public class TooltipManager : MonoBehaviour
     IEnumerator DelayShowCoroutine()
     {
         yield return new WaitForSeconds(_delayBeforeShown);
-        _tooltip.gameObject.SetActive(true);
-        _tooltip.Update();
+        
+        if(!(_isBlockedByUI && EventSystem.current.IsPointerOverGameObject()))
+        {
+            _tooltip.gameObject.SetActive(true);
+            _tooltip.Update();
+        }
     }
 }
