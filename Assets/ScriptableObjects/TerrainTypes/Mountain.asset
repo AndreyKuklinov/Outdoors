@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: 999ac4c55dcd62000ae5e9a076b186c5,
     type: 2}
-  <TileName>k__BackingField: Mountains
+  <TileName>k__BackingField: Mountain
   TooltipText: 'Right-click to reveal adjacent tiles.
 
     Yields a Mine when clicked.'

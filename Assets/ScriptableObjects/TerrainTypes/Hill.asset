@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: 85c4e2135e51190fc9ee8375639f4701,
     type: 2}
-  <TileName>k__BackingField: Hills
+  <TileName>k__BackingField: Hill
   TooltipText: 'Right-click to reveal adjacent tiles.
 
     Yields a Tower when clicked.'
