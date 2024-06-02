@@ -19,6 +19,7 @@ MonoBehaviour:
 
     Yields a Windmill when
     clicked.'
+  FoggyVersion: {fileID: 11400000, guid: 436fe788ee27fc2a58e80349a16b6fd0, type: 2}
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 6dfb2eae8d1c201218f2dbe9b0fc5402,
     type: 2}

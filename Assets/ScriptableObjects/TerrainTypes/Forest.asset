@@ -19,6 +19,7 @@ MonoBehaviour:
 
     Yields a Hunting Camp
     when clicked.'
+  FoggyVersion: {fileID: 11400000, guid: 49117a8a535fa00fb9f570b801bb37f1, type: 2}
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 082646339dcecfd5bbe2bfe93587a018,
     type: 2}

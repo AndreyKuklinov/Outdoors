@@ -21,6 +21,7 @@ MonoBehaviour:
     clicked.
 
     Cannot be built upon.'
+  FoggyVersion: {fileID: 11400000, guid: a0f8417724dbc62bcafc36c33077e295, type: 2}
   _canBeBuiltUpon: 0
   _explorationBuildingType: {fileID: 11400000, guid: 2f03cc74499a984f2bb1754ef16671d2,
     type: 2}

@@ -18,6 +18,7 @@ MonoBehaviour:
   TooltipText: 'Right-click to reveal adjacent tiles.
 
     Yields a Tower when clicked.'
+  FoggyVersion: {fileID: 11400000, guid: 7207164a28023610086bee8636eac3d1, type: 2}
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 4eaa2684b3d14fa2a9885dd75b5ecada,
     type: 2}

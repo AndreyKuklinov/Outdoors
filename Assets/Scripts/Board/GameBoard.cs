@@ -14,12 +14,12 @@ public class GameBoard : MonoBehaviour
     public delegate void BuildingPlacedHandler(int x, int y, BuildingType buildingType);
     public event BuildingPlacedHandler BuildingPlaced;
 
-    private Tilemap _tilemap;
+    public Tilemap Tilemap { get; private set; }
     private ITileGrid<TileType> _tileGrid;
 
     void Awake()
     {
-        _tilemap = GetComponent<Tilemap>();
+        Tilemap = GetComponent<Tilemap>();
         _tileGenerator.SetSeed(SceneNavigator.GameSeed);
         _tileGrid = new HexGrid<TileType>(_tileGenerator);
 
@@ -58,7 +58,7 @@ public class GameBoard : MonoBehaviour
     public (int x, int y) WorldToCell(Vector3 worldPoint)
     {
         //TODO: Change to work in 3d
-        var cellPos = _tilemap.WorldToCell(worldPoint);
+        var cellPos = Tilemap.WorldToCell(worldPoint);
         return (cellPos.x, cellPos.y);
     }
 
@@ -75,6 +75,12 @@ public class GameBoard : MonoBehaviour
         foreach(var pos in positions)
         {
             RevealTile(pos.x, pos.y);
+        }
+
+        var foggyPositions = _tileGrid.GetPositionsInRange(x, y, explorationRange+1);
+        foreach(var pos in foggyPositions)
+        {
+            DrawFoggyTile(pos.x, pos.y);
         }
     }
 
@@ -104,7 +110,18 @@ public class GameBoard : MonoBehaviour
     void DrawTile(int x, int y)
     {
         var cellPosition = new Vector3Int(x, y, 0);
-        _tilemap.SetTile(cellPosition, _tileGrid.GetTileAt(cellPosition.x, cellPosition.y).TileBase);
+        Tilemap.SetTile(cellPosition, _tileGrid.GetTileAt(cellPosition.x, cellPosition.y).TileBase);
+    }
+
+    void DrawFoggyTile(int x, int y)
+    {
+        if(RevealedTiles.Contains((x, y)))
+            return;
+
+        var cellPosition = new Vector3Int(x, y, 0);
+        var tileType = _tileGrid.GetTileAt(cellPosition.x, cellPosition.y) as TerrainType;
+
+        Tilemap.SetTile(cellPosition, tileType.FoggyVersion);
     }
 
     void OnBuildingPlaced(int x, int y, BuildingType buildingType)

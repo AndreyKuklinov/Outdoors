@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TileExplorer : MonoBehaviour
 {
+    [SerializeField] private TileRaycaster _raycaster;
     [SerializeField] private GameBoard _gameBoard;
     [SerializeField] private PurchaseManager _coinManager;
     [SerializeField] private bool _canExploreInLand;
@@ -35,12 +36,10 @@ public class TileExplorer : MonoBehaviour
 
     void HandleClick()
     {
-        var worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        var cellPos = _gameBoard.WorldToCell(worldPoint);
-
         if (Input.GetMouseButtonDown(1))
         {
-            ExploreTile(cellPos.x, cellPos.y);
+            var tilePos = _raycaster.GetTilePosition(Input.mousePosition);
+            ExploreTile(tilePos.x, tilePos.y);
         }
     }
 

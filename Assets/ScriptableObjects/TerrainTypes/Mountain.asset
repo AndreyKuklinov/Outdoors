@@ -18,6 +18,7 @@ MonoBehaviour:
   TooltipText: 'Right-click to reveal adjacent tiles.
 
     Yields a Mine when clicked.'
+  FoggyVersion: {fileID: 11400000, guid: f0613ee60bbcf880c8ebfe5c7f589060, type: 2}
   _canBeBuiltUpon: 1
   _explorationBuildingType: {fileID: 11400000, guid: 4f05cce0d6fffbda6aa80098a3ca3b08,
     type: 2}
