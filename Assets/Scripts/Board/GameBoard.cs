@@ -109,6 +109,9 @@ public class GameBoard : MonoBehaviour
 
     void DrawTile(int x, int y)
     {
+        if(RevealedTiles.Contains((x, y)))
+            return;
+
         var cellPosition = new Vector3Int(x, y, 0);
         Tilemap.SetTile(cellPosition, _tileGrid.GetTileAt(cellPosition.x, cellPosition.y).TileBase);
     }
