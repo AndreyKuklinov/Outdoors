@@ -18,6 +18,11 @@ public static class SceneNavigator
         SceneManager.LoadScene("MainMenu");
     }
 
+    public static void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public static void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
