@@ -749,8 +749,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5119068380953606845, guid: 4c2ad8c33f0c49fd8ba1590ed0f9b2f7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 362680377}
   m_SourcePrefab: {fileID: 100100000, guid: 4c2ad8c33f0c49fd8ba1590ed0f9b2f7, type: 3}
+--- !u!1 &362680376 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5119068380953606845, guid: 4c2ad8c33f0c49fd8ba1590ed0f9b2f7,
+    type: 3}
+  m_PrefabInstance: {fileID: 362680375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &362680377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362680376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 560dce48636005fc4adcee66d3bf8b18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tileMouseTrigger: {fileID: 902998458}
+  _gameBoard: {fileID: 8888479305707112713}
 --- !u!1 &391643303
 GameObject:
   m_ObjectHideFlags: 0
