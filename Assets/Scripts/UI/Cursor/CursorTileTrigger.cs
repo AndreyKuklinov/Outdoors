@@ -1,4 +1,6 @@
+using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CursorTileTrigger : MonoBehaviour
 {
@@ -14,7 +16,7 @@ public class CursorTileTrigger : MonoBehaviour
 
     void OnPointerEnterTile((int x, int y) pos)
     {
-        if(!IsTileRevealed(pos))
+        if(!IsTileRevealed(pos) || EventSystem.current.IsPointerOverGameObject())
             return;
 
         _isCursorOverTile = true;
