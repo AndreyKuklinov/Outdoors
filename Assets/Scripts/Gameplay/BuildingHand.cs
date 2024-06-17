@@ -21,8 +21,10 @@ public class BuildingHand : MonoBehaviour
     public bool IsBuildingSelected 
         => _selectedBuilding != null;
 
+    public event Action BuildingRemovedFromHand;
+
     private BuildingHandElement _selectedBuilding;
-    private int _buildingsCount;
+    public int BuildingsCount { get; private set; }
 
     void Start()
     {
@@ -37,13 +39,13 @@ public class BuildingHand : MonoBehaviour
 
     void AddBuildingToHand(BuildingType buildingType)
     {
-        if(_buildingsCount >= MaxHandCapacity || buildingType == null)
+        if(BuildingsCount >= MaxHandCapacity || buildingType == null)
             return;
 
         var handElement = _handElements.First(x => !x.gameObject.activeSelf);
         handElement.SetType(buildingType);
         handElement.gameObject.SetActive(true);
-        _buildingsCount++;
+        BuildingsCount++;
     }
 
     public void PlaceBuilding(int x, int y)
@@ -68,7 +70,8 @@ public class BuildingHand : MonoBehaviour
         _selectedBuilding.gameObject.SetActive(false);
         _selectedBuilding.Deselect();
         _selectedBuilding = null;
-        _buildingsCount--;
+        BuildingsCount--;
+        BuildingRemovedFromHand?.Invoke();
     }
 
     void TileExplored(TileType tile)

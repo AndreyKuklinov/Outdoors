@@ -8,6 +8,8 @@ public class PurchaseManager : MonoBehaviour
 
     public int InitialCoinsCount { get; private set; }
 
+    public event Action OutOfMoney;
+
     public bool CanPurchase
         => CoinsCount >= PurchaseCost;
 
@@ -22,5 +24,8 @@ public class PurchaseManager : MonoBehaviour
             throw new Exception("A purchase was made with not enough coins");
 
         CoinsCount -= PurchaseCost;
+
+        if(!CanPurchase)
+            OutOfMoney?.Invoke();
     }
 }
