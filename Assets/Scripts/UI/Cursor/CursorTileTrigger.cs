@@ -20,6 +20,7 @@ public class CursorTileTrigger : MonoBehaviour
             return;
 
         _isCursorOverTile = true;
+
         CursorManager.Singleton.SetCursorOverClicklableUI(true);
     }
 
