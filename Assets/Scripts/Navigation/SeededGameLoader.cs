@@ -7,6 +7,6 @@ public class SeededGameLoader : MonoBehaviour
 
     public void LoadGame()
     {
-        SceneNavigator.LoadGame(_gameSeedHolder.Seed);
+        SceneNavigator.LoadGame(_gameSeedHolder.Seed, false);
     }
 }

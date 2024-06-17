@@ -6,6 +6,6 @@ public class DailyChallengeLoader : MonoBehaviour
     public void LoadDailyChallenge()
     {
         var today = DateTime.Now.Date;
-        SceneNavigator.LoadGame(today.GetHashCode());
+        SceneNavigator.LoadGame(today.GetHashCode(), true);
     }
 }

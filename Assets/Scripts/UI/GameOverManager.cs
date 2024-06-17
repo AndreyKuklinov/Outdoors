@@ -6,6 +6,7 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] PurchaseManager _purchaseManager;
     [SerializeField] GameObject _restartButton;
     [SerializeField] BuildingHand _buildingHand;
+    
 
     void Update()
     {
@@ -15,6 +16,6 @@ public class GameOverManager : MonoBehaviour
 
     void GameOver()
     {
-        _restartButton.gameObject.SetActive(true);
+        _restartButton.SetActive(true);
     }
 }

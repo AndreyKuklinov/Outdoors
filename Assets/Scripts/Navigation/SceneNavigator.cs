@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public static class SceneNavigator
 {
     public static int GameSeed { get; private set; }
+    public static bool IsDaily { get; private set; }
 
-    public static void LoadGame(int seed)
+    public static void LoadGame(int seed, bool isDaily)
     {
         GameSeed = seed;
+        IsDaily = isDaily;
         SceneManager.LoadScene("GameScene");
     }
 
