@@ -2204,7 +2204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <PurchaseCost>k__BackingField: 1
-  <CoinsCount>k__BackingField: 5
+  <CoinsCount>k__BackingField: 30
 --- !u!1 &1291989683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3032,7 +3032,6 @@ MonoBehaviour:
   _purchaseManager: {fileID: 1065550030}
   _restartButton: {fileID: 1334422746}
   _buildingHand: {fileID: 830112275387941651}
-  _gameBoard: {fileID: 8888479305707112713}
 --- !u!1001 &1573796124
 PrefabInstance:
   m_ObjectHideFlags: 0
