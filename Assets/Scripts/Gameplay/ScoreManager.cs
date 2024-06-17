@@ -1,10 +1,15 @@
 using System;
 using UnityEngine;
 
-public enum Highscores
+public enum Highscore
 {
     Daily,
     Overall
+}
+
+public enum SaveData
+{
+    DailyScoreDateHash
 }
 
 public class ScoreManager : MonoBehaviour
@@ -22,9 +27,8 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
-        _bestDaily = PlayerPrefs.GetInt(nameof(Highscores.Daily));
-        _bestOverall = PlayerPrefs.GetInt(nameof(Highscores.Overall));
-        Debug.Log(_bestOverall);
+        _bestDaily = PlayerPrefs.GetInt(nameof(Highscore.Daily));
+        _bestOverall = PlayerPrefs.GetInt(nameof(Highscore.Overall));
     }
 
     void Update()
@@ -40,7 +44,8 @@ public class ScoreManager : MonoBehaviour
 
         if(Score > _bestDaily)
         {
-            PlayerPrefs.SetInt(nameof(Highscores.Daily), Score);
+            PlayerPrefs.SetInt(Highscore.Daily.ToString(), Score);
+            PlayerPrefs.SetInt(SaveData.DailyScoreDateHash.ToString(), DailyChallengeLoader.CurrentDateHash);
 
             if(_bestDaily != 0)
                 HighscoreAchieved?.Invoke();
@@ -53,7 +58,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(Score > _bestOverall)
         {
-            PlayerPrefs.SetInt(nameof(Highscores.Overall), Score);
+            PlayerPrefs.SetInt(Highscore.Overall.ToString(), Score);
 
             if(_bestOverall != 0)
                 HighscoreAchieved?.Invoke();

@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class DailyChallengeLoader : MonoBehaviour
 {
+    public static int CurrentDateHash
+        => DateTime.Now.Date.GetHashCode();
+
     public void LoadDailyChallenge()
     {
-        var today = DateTime.Now.Date;
-        SceneNavigator.LoadGame(today.GetHashCode(), true);
+        SceneNavigator.LoadGame(CurrentDateHash, true);
     }
 }
