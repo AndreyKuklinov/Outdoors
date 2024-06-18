@@ -60,9 +60,14 @@ public class GameBoard : MonoBehaviour
 
     public (int x, int y) WorldToCell(Vector3 worldPoint)
     {
-        //TODO: Change to work in 3d
         var cellPos = Tilemap.WorldToCell(worldPoint);
         return (cellPos.x, cellPos.y);
+    }
+
+    public Vector3 CellToWorld(int x, int y)
+    {
+        var cellPos = Tilemap.CellToWorld(new Vector3Int(x, y, 0));
+        return cellPos;
     }
 
     public bool HasUnrevealedNeighbours(int x, int y)

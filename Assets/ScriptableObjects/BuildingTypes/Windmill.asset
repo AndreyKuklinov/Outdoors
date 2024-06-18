@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: 740dbaf6cf1c53ffb8139afe111b738a,
     type: 2}
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: f61bbc8c8a188d0ba9e97c1167abc5af,
+    type: 3}
   <TileName>k__BackingField: Windmill
   TooltipText: '+1 prod. for each adjacent Plain when placed.
 
     +1 pop. for each
     unique adjacent building of a different type.'
+  <HandElementSprite>k__BackingField: {fileID: 21300000, guid: 2408e4286414b6fc69ca0e553d809d9e,
+    type: 3}
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 162939ec8cd5633f29a7875431afbab4,
     type: 2}

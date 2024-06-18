@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: f752ab1a37165e65683868c2951001c8,
     type: 2}
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: f61bbc8c8a188d0ba9e97c1167abc5af,
+    type: 3}
   <TileName>k__BackingField: Plantation
   TooltipText: '+1 prod. for each adjacent Swamp when placed.
 
     +1 pop. for each
     adjacent Plantation.'
+  <HandElementSprite>k__BackingField: {fileID: 21300000, guid: 47e0f4526d6609f329be3461c95a325f,
+    type: 3}
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: c4561560fe56f04cabe59ecffc1699f4,
     type: 2}

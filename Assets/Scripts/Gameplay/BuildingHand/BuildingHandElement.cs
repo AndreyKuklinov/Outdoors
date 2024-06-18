@@ -19,7 +19,7 @@ public class BuildingHandElement : MonoBehaviour, IPointerClickHandler
     public void SetType(BuildingType buildingType)
     {
         BuildingType = buildingType;
-        Image.sprite = buildingType.TileBase.sprite;
+        Image.sprite = buildingType.HandElementSprite;
         _tooltipTrigger.SetText(buildingType.TooltipText, buildingType.TileName);
     }
 

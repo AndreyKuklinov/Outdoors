@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: TileParts
+    uniqueID: 3950113897
+    locked: 0
   - name: UI
     uniqueID: 2937896057
     locked: 0

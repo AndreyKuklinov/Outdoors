@@ -14,10 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: e3e16090bd1cda92ca823f2e81b68405,
     type: 2}
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: f61bbc8c8a188d0ba9e97c1167abc5af,
+    type: 3}
   <TileName>k__BackingField: Tower
   TooltipText: '+1 prod. for each adjacent Hill when placed.
 
     +1 pop. for each
     building between this Tower and another Tower in a line.'
+  <HandElementSprite>k__BackingField: {fileID: 21300000, guid: a711d7b04f917a578952f3362dbbb516,
+    type: 3}
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 4f4ba3b8cf2de2bf8baaf384cd7cc135,
     type: 2}
