@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Plain
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: 6cdec2bf2c837f0d6b4ffc2f123be16f,
+  <TileBase>k__BackingField: {fileID: 11400000, guid: 740dbaf6cf1c53ffb8139afe111b738a,
     type: 2}
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: 589a2c6ad731543b88c02195ebf02949,
+    type: 3}
   <TileName>k__BackingField: Plain
   TooltipText: 'Click to reveal adjacent tiles.
 

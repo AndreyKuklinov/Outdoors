@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Forest
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: 2c48e353b9df4be9dbf573f6895d6b0b,
+  <TileBase>k__BackingField: {fileID: 11400000, guid: e53cc06bc116c43b6a8c7da538ab5fd2,
     type: 2}
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: ed8dee4fea2324808b50f4b48e598143,
+    type: 3}
   <TileName>k__BackingField: Forest
   TooltipText: 'Click to reveal adjacent tiles.
 

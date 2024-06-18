@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Mountain
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: 999ac4c55dcd62000ae5e9a076b186c5,
+  <TileBase>k__BackingField: {fileID: 11400000, guid: f9c2d4067c90d47d4b1fbc5f1a5b6821,
     type: 2}
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: e141829ea1ebade53b9761bf12962cbe,
+    type: 3}
   <TileName>k__BackingField: Mountain
   TooltipText: 'Click to reveal adjacent tiles.
 

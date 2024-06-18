@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-public class TileAnimator : MonoBehaviour
+public class TileDetailer : MonoBehaviour
 {
     [SerializeField] private GameBoard _gameBoard;
 
-    private Dictionary<(int x, int y), GameObject> _animatedTiles;
+    private Dictionary<(int x, int y), GameObject> _tileDetails;
 
-    void Start()
+    void Awake()
     {
         _gameBoard.TileDrawn += TileDrawn;
-        _animatedTiles = new Dictionary<(int x, int y), GameObject>();
+        _tileDetails = new Dictionary<(int x, int y), GameObject>();
     }
 
     void TileDrawn(int x, int y, TileType tileType)
     {
-        if(_animatedTiles.ContainsKey((x, y)))
+        if(_tileDetails.ContainsKey((x, y)))
             RemoveAnimatedTile(x, y);
 
         PlaceAnimatedTile(x, y, tileType);
@@ -29,11 +29,11 @@ public class TileAnimator : MonoBehaviour
             return;
 
         var pos = _gameBoard.CellToWorld(x, y);
-        _animatedTiles[(x, y)] = Instantiate(tileType.AnimatedObject, pos, quaternion.identity, transform);
+        _tileDetails[(x, y)] = Instantiate(tileType.AnimatedObject, pos, quaternion.identity, transform);
     }
 
     void RemoveAnimatedTile(int x, int y)
     {
-        Destroy(_animatedTiles[(x, y)]);
+        Destroy(_tileDetails[(x, y)]);
     }
 }

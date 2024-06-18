@@ -2701,7 +2701,7 @@ GameObject:
   - component: {fileID: 1257874394}
   - component: {fileID: 1257874395}
   m_Layer: 0
-  m_Name: TileAnimator
+  m_Name: TileDetailer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

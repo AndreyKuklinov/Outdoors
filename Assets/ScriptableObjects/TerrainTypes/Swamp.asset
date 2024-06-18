@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f8c326ded5523bfa7b7ce11a50328d, type: 3}
   m_Name: Swamp
   m_EditorClassIdentifier: 
-  <TileBase>k__BackingField: {fileID: 11400000, guid: fed4c184191d86874ace07adebaec022,
+  <TileBase>k__BackingField: {fileID: 11400000, guid: f752ab1a37165e65683868c2951001c8,
     type: 2}
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: 4ae9f4c711957e48baa25cbbd7a53dae,
+    type: 3}
   <TileName>k__BackingField: Swamp
   TooltipText: 'Click to reveal adjacent tiles.
 
