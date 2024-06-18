@@ -654,6 +654,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 480773015}
     m_Modifications:
+    - target: {fileID: 5601593372136667694, guid: a79bf48b62bd670f480acf6b157fb0f4,
+        type: 3}
+      propertyPath: _scoreType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6519991079126315729, guid: a79bf48b62bd670f480acf6b157fb0f4,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1795,7 +1800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84c279d6c15b2c6e4b10d4fd77565111, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreType: 1
+  _scoreType: 0
 --- !u!114 &1224607630
 MonoBehaviour:
   m_ObjectHideFlags: 0
