@@ -8,6 +8,6 @@ public class DailyChallengeLoader : MonoBehaviour
 
     public void LoadDailyChallenge()
     {
-        SceneNavigator.LoadGame(CurrentDateHash, true);
+        SceneNavigator.LoadGame(CurrentDateHash.ToString(), true);
     }
 }

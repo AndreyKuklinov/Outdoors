@@ -24,6 +24,6 @@ public class HighscoreLabel : MonoBehaviour
 
     void Update()
     {
-        _text.text = $"High score: {PlayerPrefs.GetInt(_scoreType.ToString())}";
+        _text.text = $"Best score: {PlayerPrefs.GetInt(_scoreType.ToString())}";
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -12,7 +13,9 @@ public class GameBoard : MonoBehaviour
     public readonly Dictionary<(int x, int y), BuildingType> Buildings = new Dictionary<(int x, int y), BuildingType>();
 
     public delegate void BuildingPlacedHandler(int x, int y, BuildingType buildingType);
+    public delegate void TileDrawnHandler(int x, int y, TileType tileType);
     public event BuildingPlacedHandler BuildingPlaced;
+    public event TileDrawnHandler TileDrawn;
 
     public Tilemap Tilemap { get; private set; }
     private ITileGrid<TileType> _tileGrid;
@@ -20,7 +23,7 @@ public class GameBoard : MonoBehaviour
     void Awake()
     {
         Tilemap = GetComponent<Tilemap>();
-        _tileGenerator.SetSeed(SceneNavigator.GameSeed);
+        _tileGenerator.SetSeed(SceneNavigator.ActualGameSeed);
         _tileGrid = new HexGrid<TileType>(_tileGenerator);
 
         ExploreTile(0,0, _initialRevealedRange);
@@ -113,7 +116,9 @@ public class GameBoard : MonoBehaviour
     void DrawTile(int x, int y)
     {
         var cellPosition = new Vector3Int(x, y, 0);
-        Tilemap.SetTile(cellPosition, _tileGrid.GetTileAt(cellPosition.x, cellPosition.y).TileBase);
+        var tileType = _tileGrid.GetTileAt(x, y);
+        Tilemap.SetTile(cellPosition, tileType.TileBase);
+        TileDrawn?.Invoke(x, y, tileType);
     }
 
     void DrawFoggyTile(int x, int y)
