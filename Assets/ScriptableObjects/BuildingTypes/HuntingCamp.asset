@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: e53cc06bc116c43b6a8c7da538ab5fd2,
     type: 2}
-  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: f61bbc8c8a188d0ba9e97c1167abc5af,
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: a693e54e66c3678fcab70481775858ed,
     type: 3}
   <TileName>k__BackingField: Hunting Camp
   TooltipText: '+1 prod. for each adjacent Forest when placed.

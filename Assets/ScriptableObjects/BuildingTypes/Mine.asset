@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: f9c2d4067c90d47d4b1fbc5f1a5b6821,
     type: 2}
-  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: f61bbc8c8a188d0ba9e97c1167abc5af,
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: 1fab1ce19dc0152a09731b60533b3c7b,
     type: 3}
   <TileName>k__BackingField: Mine
   TooltipText: '+1 prod. for each adjacent Mountain when placed.

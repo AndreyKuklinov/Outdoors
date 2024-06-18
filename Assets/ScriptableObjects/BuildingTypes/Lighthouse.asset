@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TileBase>k__BackingField: {fileID: 11400000, guid: 754f1a4a96b5a680084da0b92f07bb6b,
     type: 2}
-  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: f61bbc8c8a188d0ba9e97c1167abc5af,
+  <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: e064557af3526ccfd82f4b2328af8a56,
     type: 3}
   <TileName>k__BackingField: Lighthouse
   TooltipText: '+1 prod. for each adjacent Lake when placed.
