@@ -29,4 +29,9 @@ public class FleetingText : MonoBehaviour
             return;
         }       
     }
+
+    public void SetText(string text)
+    {
+        _text.text = text;
+    }
 }

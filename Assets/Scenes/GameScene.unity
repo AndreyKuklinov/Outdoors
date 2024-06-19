@@ -4780,10 +4780,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed1e3397f89c10d0da9a07ddea7970c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fleetingTextPrefab: {fileID: 6484958569566318790, guid: 5a6c73b488751fac68e1abfd253a19e5,
+  _fleetingTextPrefab: {fileID: 1748505244213108175, guid: 5a6c73b488751fac68e1abfd253a19e5,
     type: 3}
   _gameBoard: {fileID: 8888479305707112713}
-  _canvas: {fileID: 1796217504}
+  _canvas: {fileID: 1291989686}
+  _tileExplorer: {fileID: 2023968723}
 --- !u!1001 &2098740365
 PrefabInstance:
   m_ObjectHideFlags: 0

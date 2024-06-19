@@ -9,6 +9,8 @@ public class TileExplorer : MonoBehaviour
     [SerializeField] private bool _canExploreInLand;
 
     public event Action<TileType> TileExplored;
+    public event Action<(int x, int y)> CantExploreNoMoney;
+    public event Action<(int x, int y)> CantExploreInland;
 
     public void ExploreTile(int x, int y)
     {
@@ -24,9 +26,24 @@ public class TileExplorer : MonoBehaviour
 
     bool CanExplore(int x, int y)
     {
-        return _coinManager.CanPurchase
-            && _gameBoard.RevealedTiles.Contains((x, y))
-            && (_canExploreInLand || _gameBoard.HasUnrevealedNeighbours(x, y));
+        if(!_gameBoard.RevealedTiles.Contains((x, y)))
+        {
+            return false;
+        }
+
+        if(!_coinManager.CanPurchase)
+        {
+            CantExploreNoMoney?.Invoke((x, y));
+            return false;
+        }
+
+        if(!_canExploreInLand && !_gameBoard.HasUnrevealedNeighbours(x,y))
+        {
+            CantExploreInland?.Invoke((x, y));
+            return false;
+        }
+
+        return true;
     }
 
     void OnTileExplored(TileType tileType)
