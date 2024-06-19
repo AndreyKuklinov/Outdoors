@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Already explored
+  m_text: +9<sprite name=prod>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e7c15270bbbc69a3a9549a46970e999, type: 2}
   m_sharedMaterial: {fileID: -5211932423253065735, guid: 7e7c15270bbbc69a3a9549a46970e999,
@@ -86,7 +86,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: a3786a8e7dc6ce35591a5914b6a747ad, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901
@@ -148,6 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b24b9b8c6c11f45cb31c552c6ecb4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveUpSpeed: 90
-  _fadeOutSpeed: 3
+  _moveUpSpeed: 120
+  _fadeOutSpeed: 2
   _text: {fileID: 2263782029666728277}
