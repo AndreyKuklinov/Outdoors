@@ -4986,6 +4986,11 @@ PrefabInstance:
       propertyPath: _gameBoard
       value: 
       objectReference: {fileID: 8888479305707112713}
+    - target: {fileID: 593888720955043117, guid: 226cac987fe7b950b86c69ec9c3ceeb9,
+        type: 3}
+      propertyPath: _tileExplorer
+      value: 
+      objectReference: {fileID: 2023968723}
     - target: {fileID: 4563831289836277377, guid: 226cac987fe7b950b86c69ec9c3ceeb9,
         type: 3}
       propertyPath: m_LocalPosition.x

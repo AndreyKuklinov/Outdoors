@@ -136,4 +136,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pointerEnterClip: {fileID: 0}
-  _pointerClickClip: {fileID: 0}
+  _pointerClickClip: {fileID: 8300000, guid: 0ba3f2e47ddec0407bf46b006f0af1d4, type: 3}
