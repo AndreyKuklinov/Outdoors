@@ -200,10 +200,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+1 prod. for each adjacent tileName.
+  m_text: '+1 <sprite name=prod> for each adjacent tileName.
 
-    +1 pop. for each adjacent tile
-    next to water.'
+    +1 pop. for each
+    adjacent tile next to water.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6b7818192be311fb69da4b79cab25cbc, type: 2}
   m_sharedMaterial: {fileID: 985302375857179727, guid: 6b7818192be311fb69da4b79cab25cbc,
@@ -223,7 +223,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: a3786a8e7dc6ce35591a5914b6a747ad, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901

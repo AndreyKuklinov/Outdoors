@@ -2231,7 +2231,7 @@ MonoBehaviour:
     It
     is calculated as follows:
 
-    Score = Production X Population'
+    Score = <sprite name=prod> X <sprite name=pop>'
 --- !u!1 &850622960
 GameObject:
   m_ObjectHideFlags: 0

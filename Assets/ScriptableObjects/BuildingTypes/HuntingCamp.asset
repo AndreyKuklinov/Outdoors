@@ -17,10 +17,10 @@ MonoBehaviour:
   <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: a693e54e66c3678fcab70481775858ed,
     type: 3}
   <TileName>k__BackingField: Hunting Camp
-  TooltipText: '+1 prod. for each adjacent Forest when placed.
+  TooltipText: '+1 <sprite name=prod> for each adjacent Forest when placed.
 
-    +1 pop. for each
-    non-unique adjacent building of a different type.'
+    +1
+    <sprite name=pop> for each non-unique adjacent building of a different type.'
   <HandElementSprite>k__BackingField: {fileID: 21300000, guid: b5015603c4dcec804ac9f6a699c32831,
     type: 3}
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 37eedc4c298ccd903a6f09d821d4f419,

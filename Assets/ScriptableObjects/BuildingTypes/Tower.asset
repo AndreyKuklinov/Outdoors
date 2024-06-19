@@ -17,10 +17,11 @@ MonoBehaviour:
   <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: 27b98fb30208fa2019f30beda9032b1d,
     type: 3}
   <TileName>k__BackingField: Tower
-  TooltipText: '+1 prod. for each adjacent Hill when placed.
+  TooltipText: '+1 <sprite name=prod> for each adjacent Hill when placed.
 
-    +1 pop. for each
-    building between this Tower and another Tower in a line.'
+    +1
+    <sprite name=pop> for each building between this Tower and another Tower in a
+    line.'
   <HandElementSprite>k__BackingField: {fileID: 21300000, guid: a711d7b04f917a578952f3362dbbb516,
     type: 3}
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: 4f4ba3b8cf2de2bf8baaf384cd7cc135,
