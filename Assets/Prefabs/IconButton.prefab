@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8403994680100248841}
   - component: {fileID: 1155844073057691080}
   - component: {fileID: 3487634366673709920}
+  - component: {fileID: 5608933525990603003}
   m_Layer: 5
   m_Name: IconButton
   m_TagString: Untagged
@@ -133,3 +134,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0ce15fdf96470e392346380a09ab6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5608933525990603003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3888372018770631706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4f4622ceb136c14b294f5a8f4e2f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointerEnterClip: {fileID: 0}
+  _pointerClickClip: {fileID: 8300000, guid: b01734c24c953bcd6a4fe1eafb98ae93, type: 3}

@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: Purpur Hex
+  companyName: Purpur
+  productName: Outdoors
   defaultCursor: {fileID: 2800000, guid: 3a9bfb81d8fcbb73fa4a462440c87266, type: 3}
   cursorHotspot: {x: 0.3, y: 0.7}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
