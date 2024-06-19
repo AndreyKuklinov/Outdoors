@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buildingPlacedClip: {fileID: 8300000, guid: 4f80afdf81a81bd00b46fd16d140aa05, type: 3}
-  _tileExploredClip: {fileID: 8300000, guid: 40cac11edadbb18b89d1bd39ff94ae8d, type: 3}
+  _tileExploredClip: {fileID: 8300000, guid: b95ea6ff125c564b5a504d4e33e40efa, type: 3}
   _gameBoard: {fileID: 0}
   _tileExplorer: {fileID: 0}

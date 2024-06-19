@@ -7,6 +7,12 @@ public class SoundManager : MonoBehaviour
 
     void Start()
     {
+        if(Singleton != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         Singleton = this;
         DontDestroyOnLoad(gameObject);
     }
