@@ -12,22 +12,22 @@ public class FleetingText : MonoBehaviour
 
     private Color _newColor;
     private Vector3 _worldPosition;
-    private float _y;
+    private float _yOffset;
 
     void Start()
     {
         _newColor = new Color(_text.color.r, _text.color.g, _text.color.b, 0);
         _worldPosition = Camera.main.ScreenToWorldPoint(transform.position);
-        _y = transform.position.y;
+        _yOffset = 0;
     }
 
     void Update()
     {
         _text.color = Color.Lerp(_text.color, _newColor, _fadeOutSpeed * Time.deltaTime);
     
-        _y += _moveUpSpeed * Time.deltaTime;
+        _yOffset += _moveUpSpeed * Time.deltaTime;
         var pos = Camera.main.WorldToScreenPoint(_worldPosition);
-        transform.position = new Vector3(pos.x, _y, pos.z);
+        transform.position = new Vector3(pos.x, pos.y + _yOffset, pos.z);
 
         if(_text.color.a <= 0.01)
         {
