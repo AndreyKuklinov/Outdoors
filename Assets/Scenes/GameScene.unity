@@ -4786,6 +4786,7 @@ MonoBehaviour:
     type: 3}
   _gameBoard: {fileID: 8888479305707112713}
   _canvas: {fileID: 1291989686}
+  _buildingCollector: {fileID: 480437872}
   _tileExplorer: {fileID: 2023968723}
 --- !u!1001 &2098740365
 PrefabInstance:

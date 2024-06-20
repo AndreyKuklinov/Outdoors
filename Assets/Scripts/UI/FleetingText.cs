@@ -8,6 +8,7 @@ public class FleetingText : MonoBehaviour
 {
     [SerializeField] private float _moveUpSpeed;
     [SerializeField] private float _fadeOutSpeed;
+    [SerializeField] private float _disappearThreshold;
     [SerializeField] TextMeshProUGUI _text;
 
     private Color _newColor;
@@ -29,7 +30,7 @@ public class FleetingText : MonoBehaviour
         var pos = Camera.main.WorldToScreenPoint(_worldPosition);
         transform.position = new Vector3(pos.x, pos.y + _yOffset, pos.z);
 
-        if(_text.color.a <= 0.01)
+        if(_text.color.a <= _disappearThreshold)
         {
             Destroy(gameObject);
             return;

@@ -150,4 +150,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveUpSpeed: 120
   _fadeOutSpeed: 2
+  _disappearThreshold: 0.01
   _text: {fileID: 2263782029666728277}
