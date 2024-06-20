@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using TMPro;
 using UnityEngine;
 
@@ -10,18 +11,23 @@ public class FleetingText : MonoBehaviour
     [SerializeField] TextMeshProUGUI _text;
 
     private Color _newColor;
+    private Vector3 _worldPosition;
+    private float _y;
 
     void Start()
     {
         _newColor = new Color(_text.color.r, _text.color.g, _text.color.b, 0);
+        _worldPosition = Camera.main.ScreenToWorldPoint(transform.position);
+        _y = transform.position.y;
     }
 
     void Update()
     {
         _text.color = Color.Lerp(_text.color, _newColor, _fadeOutSpeed * Time.deltaTime);
     
-        var newPos = new Vector3(transform.position.x, transform.position.y + _moveUpSpeed * Time.deltaTime, transform.position.z);
-        transform.position = newPos;
+        _y += _moveUpSpeed * Time.deltaTime;
+        var pos = Camera.main.WorldToScreenPoint(_worldPosition);
+        transform.position = new Vector3(pos.x, _y, pos.z);
 
         if(_text.color.a <= 0.01)
         {
