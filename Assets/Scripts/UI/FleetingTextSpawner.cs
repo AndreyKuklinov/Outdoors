@@ -36,7 +36,7 @@ public class FleetingTextSpawner : MonoBehaviour
         {
             if(_gameBoard.GetTileAt(pos.x, pos.y) == buildingType.AdjacencyBonusTerrainType)
             {
-                SpawnTextAtHex(pos.x, pos.y, "<sprite name=prod>", _slowFleetingText);
+                SpawnTextAtHex(pos.x, pos.y, "<sprite name=pop>", _slowFleetingText);
             }
         }
     }
@@ -45,7 +45,7 @@ public class FleetingTextSpawner : MonoBehaviour
     {
         foreach(var pos in buildingType.GetScoringPositionsAfterBuild(x, y, _gameBoard))
         {
-            SpawnTextAtHex(pos.x, pos.y, "<sprite name=pop>", _slowFleetingText);
+            SpawnTextAtHex(pos.x, pos.y, "<sprite name=prod>", _slowFleetingText);
         }
     }
 }

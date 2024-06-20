@@ -17,10 +17,10 @@ MonoBehaviour:
   <AnimatedObject>k__BackingField: {fileID: 6242690361958329542, guid: f6aaed5ce3d7d81f5b87eabe8edd954b,
     type: 3}
   <TileName>k__BackingField: Plantation
-  TooltipText: '+1 <sprite name=prod> for each adjacent Swamp when placed.
+  TooltipText: '+1 <sprite name=pop> for each adjacent Swamp when placed.
 
     +1
-    <sprite name=pop> for each adjacent Plantation.'
+    <sprite name=prod> for each adjacent Plantation.'
   <HandElementSprite>k__BackingField: {fileID: 21300000, guid: 47e0f4526d6609f329be3461c95a325f,
     type: 3}
   <AdjacencyBonusTerrainType>k__BackingField: {fileID: 11400000, guid: c4561560fe56f04cabe59ecffc1699f4,

@@ -827,10 +827,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 278948578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7dba6da827e36e40baf0d03e0ef410f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a4bda8bb5d7000ed81b743426617b87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsCollector: {fileID: 1881347687}
+  _pointsCollector: {fileID: 480437872}
 --- !u!1 &289346552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,8 +1811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipManager: {fileID: 138078092}
   Header: Production
-  Body: "To increase your production, place buildings next to terrain of the same
-    color. \nFor more information hover your mouse over any building."
+  Body: "Each building has a unique way of generating production. \nFor more information
+    hover your mouse over any building."
 --- !u!1001 &648339742
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2231,7 +2231,7 @@ MonoBehaviour:
     It
     is calculated as follows:
 
-    Score = <sprite name=prod> X <sprite name=pop>'
+    Score = <sprite name=pop> X <sprite name=prod>'
 --- !u!1 &850622960
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,8 +2261,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 620681239}
   - {fileID: 1049168175}
+  - {fileID: 620681239}
   m_Father: {fileID: 124673724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2675,8 +2675,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tooltipManager: {fileID: 138078092}
   Header: Population
-  Body: "To increase your population, place buildings near each other in a certain
-    way. \nFor more information hover your mouse over any building."
+  Body: "To increase your population, place buildings next to terrain of the same
+    color. \nFor more information hover your mouse over any building."
 --- !u!1 &1065550028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,7 +2722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <PurchaseCost>k__BackingField: 1
-  <CoinsCount>k__BackingField: 25
+  <CoinsCount>k__BackingField: 30
 --- !u!1 &1257874393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2998,10 +2998,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1307106049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a4bda8bb5d7000ed81b743426617b87, type: 3}
+  m_Script: {fileID: 11500000, guid: b7dba6da827e36e40baf0d03e0ef410f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointsCollector: {fileID: 480437872}
+  _pointsCollector: {fileID: 1881347687}
 --- !u!1001 &1334422744
 PrefabInstance:
   m_ObjectHideFlags: 0
