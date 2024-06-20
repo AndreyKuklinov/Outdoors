@@ -1,12 +1,13 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName="BuildingTypes/AdjacentToUniqueBuilding")]
 public class AdjacentToUniqueBuilding : BuildingType
 {
-    public override int CalculateScore(int x, int y, GameBoard gameBoard)
+    public override HashSet<(int x, int y)> GetScoringPositionsAfterBuild(int x, int y, GameBoard gameBoard)
     {
-        var uniqueBuildings = new HashSet<TileType>();
+        var uniqueBuildings = new Dictionary<TileType, (int x, int y)>();
         var nonUniqueBuildings = new HashSet<TileType>();
 
         foreach(var pos in gameBoard.GetRevealedPositionsInRange(x, y ,1))
@@ -19,18 +20,18 @@ public class AdjacentToUniqueBuilding : BuildingType
             if(buildingType == this)
                 continue;
 
-            if(!uniqueBuildings.Contains(buildingType) && !nonUniqueBuildings.Contains(buildingType))
+            if(!uniqueBuildings.ContainsKey(buildingType) && !nonUniqueBuildings.Contains(buildingType))
             {
-                uniqueBuildings.Add(buildingType);
+                uniqueBuildings.Add(buildingType, pos);
             }
 
-            else if(uniqueBuildings.Contains(buildingType))
+            else if(uniqueBuildings.ContainsKey(buildingType))
             {
                 uniqueBuildings.Remove(buildingType);
                 nonUniqueBuildings.Add(buildingType);
             }
         }
 
-        return uniqueBuildings.Count;
+        return uniqueBuildings.Values.ToHashSet();
     }
 }

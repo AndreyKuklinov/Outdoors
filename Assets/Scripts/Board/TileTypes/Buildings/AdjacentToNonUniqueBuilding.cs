@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName="BuildingTypes/AdjacentToNonUniqueBuilding")]
 public class AdjacentToNonUniqueBuilding : BuildingType
 {
-    public override int CalculateScore(int x, int y, GameBoard gameBoard)
+    public override HashSet<(int x, int y)> GetScoringPositionsAfterBuild(int x, int y, GameBoard gameBoard)
     {
         var buildingCounts = new Dictionary<TileType, int>();
 
@@ -22,9 +22,8 @@ public class AdjacentToNonUniqueBuilding : BuildingType
             IncreaseCount(buildingCounts, buildingType);
         }
 
-        return buildingCounts
-            .Where(pair => pair.Value >= 2)
-            .Sum(pair => pair.Value);
+        var qualifiedTypes = buildingCounts.Where(pair => pair.Value >= 2).Select(pair => pair.Key).ToHashSet();
+        return gameBoard.GetRevealedPositionsInRange(x, y, 1).Where(pos => qualifiedTypes.Contains(gameBoard.GetTileAt(pos.x, pos.y))).ToHashSet();
     }
 
     void IncreaseCount(Dictionary<TileType, int> dict, TileType type)

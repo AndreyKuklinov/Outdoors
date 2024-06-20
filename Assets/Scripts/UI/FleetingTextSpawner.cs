@@ -17,7 +17,7 @@ public class FleetingTextSpawner : MonoBehaviour
         _tileExplorer.CantExploreInland += ((int x, int y) pos) => SpawnTextAtHex(pos.x, pos.y, "Already explored", _quickFleetingText);
         _tileExplorer.CantExploreNoMoney += ((int x, int y) pos) => SpawnTextAtHex(pos.x, pos.y, "No money", _quickFleetingText);
         _gameBoard.BuildingPlaced += SpawnForEachProductionTile;
-        _buildingCollector.BuildingCollectedPoints += ((int x, int y, int sum) args) => SpawnForPopulation(args.x, args.y, args.sum);
+        _gameBoard.BuildingPlaced += SpawnForEachPopulationTile;
     }
 
     public void SpawnTextAtHex(int x, int y, string text, FleetingText prefab)
@@ -36,15 +36,16 @@ public class FleetingTextSpawner : MonoBehaviour
         {
             if(_gameBoard.GetTileAt(pos.x, pos.y) == buildingType.AdjacencyBonusTerrainType)
             {
-                SpawnTextAtHex(pos.x, pos.y, "+1<sprite name=prod>", _slowFleetingText);
+                SpawnTextAtHex(pos.x, pos.y, "<sprite name=prod>", _slowFleetingText);
             }
         }
     }
 
-    void SpawnForPopulation(int x, int y, int sum)
+    void SpawnForEachPopulationTile(int x, int y, BuildingType buildingType)
     {
-        var sign = sum > 0 ? "+" : "";
-        var text = $"{sign}{sum}<sprite name=pop>";
-        SpawnTextAtHex(x, y, text, _slowFleetingText);
+        foreach(var pos in buildingType.GetScoringPositionsAfterBuild(x, y, _gameBoard))
+        {
+            SpawnTextAtHex(pos.x, pos.y, "<sprite name=pop>", _slowFleetingText);
+        }
     }
 }
